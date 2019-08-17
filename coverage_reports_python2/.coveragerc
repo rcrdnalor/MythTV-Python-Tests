@@ -1,0 +1,10 @@
+# .coveragerc to control coverage.py
+
+[run]
+branch = True
+source = MythTV
+
+omit = 
+    test/*
+    MythTV/ttvdb/*
+    MythTV/wikiscripts/*

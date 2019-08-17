@@ -1,0 +1,156 @@
+# This is the environment file for testing of MythTV's Python Bindings
+# Copy this file to '.testenv' and fill in the data
+#
+# Preconditions for the tests:
+#  - /tmp must be read/writeable
+#  - a hardcoded script registered to Key_01 system event.
+#       See https://www.mythtv.org/wiki/SYSTEM_EVENT_(Myth_Protocol)
+#     The steps to follow:
+#     Step1: Setup on your local PC, which has mythfrontend installed, a system event like:
+#       "Key_01 /usr/local/bin/mythsystemeventtest.sh %SENDER%"
+#       Verify with mysql:
+#         $ mysql -h <backendIP> -u mythtv -p<password> mythconverg
+#           MariaDB [mythconverg]> select * from settings where value = 'EventCmdKey01';
+#            | EventCmdKey01 | /usr/local/bin/mythsystemeventtest.sh %SENDER% | <master_backend_ip>   |
+#     Step2: Setup a the script on your local PC that runs on a system event, make it executeable:
+#       Name: /usr/local/bin/mythsystemeventtest.sh
+#         #!/bin/bash
+#         me=$(/usr/bin/basename "${0}")
+#         log=/tmp/my_mse_logfile
+#         echo `date` "$me $@" >>$log
+#         exit 0
+#     Step3: You need to have access to the backend via ssh as user mythtv
+#         using pre-shared keys. Ask the internet how to install this.
+#         "ssh mythtv@<backend-ip> 'mythutil --systemevent KEY_01'"
+#         must work without asking for a password.
+#       Caution: The linux community consider the way of setup this ssh key
+#                for a user without a password as security risk.
+#  - The dedicated frontend needs to have the control socket enabled.
+#        See https://www.mythtv.org/wiki/Frontend_control_socket
+#        This allows to control the frontend remotely by testscripts.
+#
+# Notes and caveats on adding or writing new tests:
+# -  Logging: The test cases uses sometimes additional environment variables like
+#        "--nodblog --loglevel debug --verbose all --logfile /tmp/my_logfile".
+#        The stanza 'with add_log_flags():' or a similar statement adds these
+#        environment variables automatically to the test procedures.
+#        Note: All test procedures in a single file must use the same way of
+#              involving logging of the bindings or the test procedure itself.
+#              This is a limitation of the pythons's unittest module:
+#              Please use the same method involving logging for *ALL*
+#              test procedures (classes or methods) in a single file.
+
+
+# It is advised to fill in all listet key/value pairs in the following sections:
+
+# The general syntax is (without any additional commnents):
+# export 'KEY'='value'
+
+
+# The ip adress and name of a dedicated frontend:
+# Syntax:
+#  export FRONTENDIP=192.168.47.11
+#  export FRONTENDNAME=galileogalilei
+export FRONTENDIP=
+export FRONTENDNAME=
+
+
+# A recording that can be played on the dedicated frontend:
+# Note: German umlauts or French accents should be in the description of the recording
+# Hint: press 'I' button twice on selected recording, and get something like
+#       '4711_20190305125100.ts' and the recording rule number ('RECRECORDID').
+#        Get the 'inetref' by selecting 'M', 'Record Options', 'Change Metadata"
+# The recording must have an "inetref" and a "coverart", but no "closedcaptions",
+# and a userrating ('stars') other then 0.0.
+# Syntax:
+#  export RECHANID=4711
+#  export RECSTARTTIMEUTC=2019-03-05T12:51:00Z
+#  export RECSTARTTIMEMYTH=20190305135100    ###  Note this is local time
+#  export RECTITLE="Die Lady von Hong Kong"
+#  export RECBASENAME=4711_20190305125100.mkv
+#  export RECRECORDID=10627
+#  export RECINETREF=tmdb3.py_1234
+#  export RECSTARS=5.0
+export RECCHANID=
+export RECSTARTTIMEUTC=
+export RECSTARTTIMEMYTH=
+export RECTITLE=
+export RECBASENAME=
+export RECRECORDID=
+export RECINETREF=
+export RECSTARS=
+
+
+# A series entry in the Program Guide data that gets recorded:
+#  This can be taken from the "Upcoming Recordings" page.
+# Syntax:
+#  export UPTITLE="The Sampsons"
+#  export UPTITLEFUZZY="Sampsons"
+#  export UPCHANID=4711
+export UPTITLE=
+export UPTITLEFUZZY=
+export UPCHANID=
+
+
+# A video title and a cast member of the video gallery:
+# This can be taken from video gallery by pressing 'I'.
+# The ineteref can be a number or a combined inetref, like "<grabber>_number".
+# For testing purposes, one interref must have a grabber defined,
+# the other one is an integer only
+# This is repeated for english and foreign languages (utf8)
+#
+# Syntax:
+#  export VIDTITLE="Let's Make Someting"
+#  export VIDCAST="Mayrlin Monreo"
+#  export VIDINETREF=24015   ### or tmdb3.py_4711
+#  export VIDLANGUAGE=en
+#  export VIDPATH="dvds/MM/Lets Make Something"
+export VIDTITLE=
+export VIDCAST=
+export VIDINETREF=
+export VIDLANGUAGE=
+export VIDPATH=
+
+# Video properties in a different language then English:
+# shuld contain German umlauts or Frech accents or...
+# Syntax:
+#  export VIDTITLE_DE="Indiana James und das Kaiserreich des Kristallschädels"
+#  export VIDCAST_DE="Hamilton Ford"
+#  export VIDINETREF_DE=2170
+#  export VIDLANGUAGE_DE=de
+#  export VIDPATH_DE="TV/Indiana Jones/Indiana James und das Kaiserreich des Kristallschädels.mkv"
+
+export VIDTITLE_DE=
+export VIDCAST_DE=
+export VIDINETREF_DE=
+export VIDLANGUAGE_DE=
+export VIDPATH_DE=
+
+
+# Timespans where mythtv holds recordings, for Standard-Time and Summer-Time (daylight saving time)
+# These timespans are defined as
+#   T1_STDT < t < T2_STDT       # standard time
+#   T1_ST   < t < T2_ST         # summer time
+# and should be defined in mythtv-time notation ('YYYYMMDDhhmmss')
+# Syntax:
+#  export T1_STDT=20190102190000
+#  export T2_STDT=20190302190000
+#  export T1_ST=20190402180000
+#  export T2_ST=20190502180000
+export T1_STDT=
+export T2_STDT=
+export T1_ST=
+export T2_ST=
+
+
+# A short recorded file that can be downloaded from the backend:
+# Note: This recorded is used to re-create the seek table, too.
+# Syntax:
+#  export DOWNSTORAGEGROUP=Default
+#  export DOWNCHANID=4711
+#  export DOWNSTARTTIME=20190622125000
+#  export DOWNFILENAME=4711_20190622105000.mkv
+export DOWNSTORAGEGROUP=
+export DOWNCHANID=
+export DOWNSTARTTIME=
+export DOWNFILENAME=

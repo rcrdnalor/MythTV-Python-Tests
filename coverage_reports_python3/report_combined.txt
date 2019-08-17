@@ -1,0 +1,494 @@
+$ python-coverage erase
+
+$ python-coverage run --parallel-mode --concurrency=multiprocessing run_all_tests_combined.py
+test_Dataheap_Job_001_01 (test.test_Dataheap_Job_001.test_Dataheap_Job_001)
+Test classmethod Job.fromRecorded() from 'dataheap'. ... ./mythtv/mythtv/bindings/python/MythTV/_conn_mysqldb.py:72: Warning: (1364L, u"Field 'args' doesn't have a default value")
+  return super(LoggedCursor, self).execute(query, args)
+ok
+
+----------------------------------------------------------------------
+Ran 1 test in 30.081s
+
+OK
+test_Dataheap_Job_002_01 (test.test_Dataheap_Job_002.test_Dataheap_Job_002)
+Test classmethod Job.fromProgram() from 'dataheap'. ... ./mythtv/mythtv/bindings/python/MythTV/_conn_mysqldb.py:72: Warning: (1364L, u"Field 'args' doesn't have a default value")
+  return super(LoggedCursor, self).execute(query, args)
+ok
+test_Dataheap_Job_002_02 (test.test_Dataheap_Job_002.test_Dataheap_Job_002)
+Test exception of classmethod Job.fromProgram() from 'dataheap'. ... ok
+
+----------------------------------------------------------------------
+Ran 2 tests in 60.141s
+
+OK
+test_Dataheap_Recorded_001_01 (test.test_Dataheap_Recorded_001.test_Dataheap_Recorded_001)
+Test property 'artwork' in class 'Recorded' from 'dataheap'. ... ok
+test_Dataheap_Recorded_001_02 (test.test_Dataheap_Recorded_001.test_Dataheap_Recorded_001)
+Test method 'getProgram()' in class 'Recorded' from 'dataheap'. ... ok
+test_Dataheap_Recorded_001_03 (test.test_Dataheap_Recorded_001.test_Dataheap_Recorded_001)
+Test method 'getRecordedProgram()' in class 'Recorded' from 'dataheap'. ... ok
+test_Dataheap_Recorded_001_04 (test.test_Dataheap_Recorded_001.test_Dataheap_Recorded_001)
+Test method 'formatPath()' in class 'Recorded' from 'dataheap'. ... ok
+test_Dataheap_Recorded_001_05 (test.test_Dataheap_Recorded_001.test_Dataheap_Recorded_001)
+Test method 'exportMetadata()' in class 'Recorded' from 'dataheap'. ... ok
+test_Dataheap_Recorded_001_06 (test.test_Dataheap_Recorded_001.test_Dataheap_Recorded_001)
+Test method 'Recorded.importMetadata()' and 'Recorded.update()' ... ok
+
+----------------------------------------------------------------------
+Ran 6 tests in 0.110s
+
+OK
+test_Dataheap_Video_001_getHash_01 (test.test_Dataheap_Video_001.test_Dataheap_Video_001)
+Test 'getHash' method from MythTV.Video ... ok
+
+----------------------------------------------------------------------
+Ran 1 test in 0.035s
+
+OK
+test_Dataheap_Video_002_parseFilename_01 (test.test_Dataheap_Video_002.test_Dataheap_Video_002)
+Test 'parseFilename' method from MythTV.Video ... ok
+test_Dataheap_Video_002_parseFilename_02 (test.test_Dataheap_Video_002.test_Dataheap_Video_002)
+Test 'parseFilename' method from MythTV.Video ... ok
+
+----------------------------------------------------------------------
+Ran 2 tests in 0.023s
+
+OK
+test_Dataheap_Video_003_exportMetadata_01 (test.test_Dataheap_Video_003.test_Dataheap_Video_003)
+Test 'exportMetadata' method from MythTV.Video. ... ok
+test_Dataheap_Video_003_fromFilename_01 (test.test_Dataheap_Video_003.test_Dataheap_Video_003)
+Test 'fromFilename' classmethod from MythTV.Video. ... ok
+test_Dataheap_Video_003_importMetadata_01 (test.test_Dataheap_Video_003.test_Dataheap_Video_003)
+Test 'exportMetadata' method from MythTV.Video. ... ok
+
+----------------------------------------------------------------------
+Ran 3 tests in 0.106s
+
+OK
+test_datetime_001_01 (test.test_datetime_001.test_datetime_001)
+Test 'ISO' to 'UTC' conversion in respect to daylight saving time of 'Europe/Vienna' ... ok
+test_datetime_001_02 (test.test_datetime_001.test_datetime_001)
+Test 'ISO' to 'UTC' conversion in respect to daylight saving time of 'Europe/Vienna' ... ok
+test_datetime_001_03 (test.test_datetime_001.test_datetime_001)
+Test 'ISO' to 'UTC' conversion in respect to daylight saving time of 'Europe/Vienna' ... ok
+test_datetime_001_04 (test.test_datetime_001.test_datetime_001)
+Test 'mythtime (i.e. integer time)' to 'UTC' conversion in respect to daylight saving time of 'Europe/Vienna' ... ok
+test_datetime_001_05 (test.test_datetime_001.test_datetime_001)
+Test 'mythtime (i.e. integer time)' to 'UTC' conversion in respect to daylight saving time of 'Europe/Vienna' ... ok
+test_datetime_001_06 (test.test_datetime_001.test_datetime_001)
+Test 'mythtime (i.e. integer time)' to 'UTC' conversion in respect to daylight saving time of 'Europe/Vienna' ... ok
+test_datetime_001_07 (test.test_datetime_001.test_datetime_001)
+Test 'timestamp (i.e. seconds from epoch)' to 'UTC' conversion in respect to daylight saving time of 'Europe/Vienna' ... ok
+test_datetime_001_08 (test.test_datetime_001.test_datetime_001)
+Test 'timestamp (i.e. seconds from epoch)' to 'UTC' conversion in respect to daylight saving time of 'Europe/Vienna' ... ok
+test_datetime_001_09 (test.test_datetime_001.test_datetime_001)
+Test 'timestamp (i.e. seconds from epoch)' to 'UTC' conversion in respect to daylight saving time of 'Europe/Vienna' ... ok
+test_datetime_001_10 (test.test_datetime_001.test_datetime_001)
+Test 'utctimestamp (i.e. seconds from epoch)' to 'UTC' conversion in respect to daylight saving time of 'Europe/Vienna' ... ok
+test_datetime_001_11 (test.test_datetime_001.test_datetime_001)
+Test 'RFC' to 'UTC' conversion in respect to daylight saving time of 'Europe/Vienna' ... ok
+test_datetime_001_12 (test.test_datetime_001.test_datetime_001)
+Test 'RFC' to 'UTC' conversion in respect to daylight saving time of 'Europe/Vienna' ... ok
+test_datetime_001_13 (test.test_datetime_001.test_datetime_001)
+Test 'RFC' to 'UTC' conversion in respect to daylight saving time of 'Europe/Vienna' ... ok
+
+----------------------------------------------------------------------
+Ran 13 tests in 0.068s
+
+OK
+test_datetime_002_01 (test.test_datetime_002.test_datetime_002)
+Test 'ISO' to 'UTC' conversion in respect to daylight saving time of 'America/Anchorage' ... ok
+test_datetime_002_02 (test.test_datetime_002.test_datetime_002)
+Test 'ISO' to 'UTC' conversion in respect to daylight saving time of 'America/Anchorage' ... ok
+test_datetime_002_03 (test.test_datetime_002.test_datetime_002)
+Test 'ISO' to 'UTC' conversion in respect to daylight saving time of 'America/Anchorage' ... ok
+test_datetime_002_04 (test.test_datetime_002.test_datetime_002)
+Test 'mythtime (i.e. integer time)' to 'UTC' conversion in respect to daylight saving time of 'America/Anchorage' ... ok
+test_datetime_002_05 (test.test_datetime_002.test_datetime_002)
+Test 'mythtime (i.e. integer time)' to 'UTC' conversion in respect to daylight saving time of 'America/Anchorage' ... ok
+test_datetime_002_06 (test.test_datetime_002.test_datetime_002)
+Test 'mythtime (i.e. integer time)' to 'UTC' conversion in respect to daylight saving time of 'America/Anchorage' ... ok
+test_datetime_002_07 (test.test_datetime_002.test_datetime_002)
+Test 'timestamp (i.e. seconds from epoch)' to 'UTC' conversion in respect to daylight saving time of 'America/Anchorage' ... ok
+test_datetime_002_08 (test.test_datetime_002.test_datetime_002)
+Test 'timestamp (i.e. seconds from epoch)' to 'UTC' conversion in respect to daylight saving time of 'America/Anchorage' ... ok
+test_datetime_002_09 (test.test_datetime_002.test_datetime_002)
+Test 'timestamp (i.e. seconds from epoch)' to 'UTC' conversion in respect to daylight saving time of 'America/Anchorage' ... ok
+test_datetime_002_10 (test.test_datetime_002.test_datetime_002)
+Test 'utctimestamp (i.e. seconds from epoch)' to 'UTC' conversion in respect to daylight saving time of 'America/Anchorage' ... ok
+test_datetime_002_11 (test.test_datetime_002.test_datetime_002)
+Test 'RFC' to 'UTC' conversion in respect to daylight saving time of 'America/Anchorage' ... ok
+test_datetime_002_12 (test.test_datetime_002.test_datetime_002)
+Test 'RFC' to 'UTC' conversion in respect to daylight saving time of 'America/Anchorage' ... ok
+test_datetime_002_13 (test.test_datetime_002.test_datetime_002)
+Test 'RFC' to 'UTC' conversion in respect to daylight saving time of 'America/Anchorage' ... ok
+
+----------------------------------------------------------------------
+Ran 13 tests in 0.069s
+
+OK
+test_dictdata_001_01 (test.test_DictData_001.test_DictData_001)
+Test filling and 'decompressing' of a simple DictData 'integer' object. ... ok
+test_dictdata_001_02 (test.test_DictData_001.test_DictData_001)
+Test filling and 'decompressing' of a simple DictData 'float' object. ... ok
+test_dictdata_001_03 (test.test_DictData_001.test_DictData_001)
+Test filling and 'decompressing' of a simple DictData 'bool' object. ... ok
+test_dictdata_001_04 (test.test_DictData_001.test_DictData_001)
+Test filling and 'decompressing' of a simple DictData 'str' object. ... ok
+test_dictdata_001_05 (test.test_DictData_001.test_DictData_001)
+Test filling and 'decompressing' of a simple DictData 'tiemstamp' object. ... ok
+test_dictdata_001_06 (test.test_DictData_001.test_DictData_001)
+Test filling and 'decompressing' of a simple DictData 'ISO date' object. ... ok
+test_dictdata_001_07 (test.test_DictData_001.test_DictData_001)
+Test filling and 'decompressing' of a simple DictData 'RFC time' object. ... ok
+
+----------------------------------------------------------------------
+Ran 7 tests in 0.001s
+
+OK
+test_Logging_Basic_001_01 (test.test_Logging_001.test_Logging_Basic_001)
+Test if default options works with MythLog. ... ok
+test_Logging_Basic_002_01 (test.test_Logging_001.test_Logging_Basic_002)
+Test if options can be modified from MythTV.MythLog. ... ok
+
+----------------------------------------------------------------------
+Ran 2 tests in 0.001s
+
+OK
+test_Logging_Basic_003_01 (test.test_Logging_002.test_Logging_Basic_003)
+Test that default options does not work without a MythLog instance. ... ok
+test_Logging_Basic_004_01 (test.test_Logging_002.test_Logging_Basic_004)
+"Test if setting options works without a MythLog instance. ... ok
+
+----------------------------------------------------------------------
+Ran 2 tests in 0.001s
+
+OK
+test_logging_OptParse_001_01 (test.test_Logging_003.test_Logging_OptParse_001)
+Test if 'OptParse' works with MythLog. ... ok
+
+----------------------------------------------------------------------
+Ran 1 test in 0.001s
+
+OK
+test_logging_OptParse_002_01 (test.test_Logging_004.test_Logging_OptParse_002)
+Test if 'OptParse' works with MythLog. ... ok
+
+----------------------------------------------------------------------
+Ran 1 test in 0.002s
+
+OK
+test_Logging_argparse_001_01 (test.test_Logging_005.test_Logging_argparse_001)
+Test if 'argparse' works with MythLog. ... ok
+
+----------------------------------------------------------------------
+Ran 1 test in 0.002s
+
+OK
+test_Logging_argparse_002_01 (test.test_Logging_006.test_Logging_argparse_002)
+Test if 'argparse' works with MythLog. ... ok
+
+----------------------------------------------------------------------
+Ran 1 test in 0.002s
+
+OK
+test_test_Methodheap_BEEventMonitor_001_01 (test.test_Methodheap_BEEventMonitor_001.test_Methodheap_BEEventMonitor_001)
+Test 'BEEventMonitor' from MythTV.BEEventMonitor() with logging. ... ok
+
+----------------------------------------------------------------------
+Ran 1 test in 21.901s
+
+OK
+test_Methodheap_Frontend_001_getLoad_01 (test.test_Methodheap_Frontend_001.test_Methodheap_Frontend_001)
+Test 'getLoad' methods from MythTV.Frontend(). ... ok
+test_Methodheap_Frontend_001_getMemory_01 (test.test_Methodheap_Frontend_001.test_Methodheap_Frontend_001)
+Test 'getTime' methods from MythTV.Frontend(). ... ok
+test_Methodheap_Frontend_001_getPlay_01 (test.test_Methodheap_Frontend_001.test_Methodheap_Frontend_001)
+Test 'getPlay'' methods from MythTV.Frontend(). ... ok
+test_Methodheap_Frontend_001_getQuery_01 (test.test_Methodheap_Frontend_001.test_Methodheap_Frontend_001)
+Test 'getQuery'' methods from MythTV.Frontend(). ... ok
+test_Methodheap_Frontend_001_getScreenShot_01 (test.test_Methodheap_Frontend_001.test_Methodheap_Frontend_001)
+Test 'getScreenShot' methods from MythTV.Frontend(). ... ok
+test_Methodheap_Frontend_001_getTime_01 (test.test_Methodheap_Frontend_001.test_Methodheap_Frontend_001)
+Test 'getTime' methods from MythTV.Frontend(). ... ok
+test_Methodheap_Frontend_001_getUptime_01 (test.test_Methodheap_Frontend_001.test_Methodheap_Frontend_001)
+Test 'getUptime' methods from MythTV.Frontend(). ... ok
+test_Methodheap_Frontend_001_query_play_01 (test.test_Methodheap_Frontend_001.test_Methodheap_Frontend_001)
+Test 'sendQuery', 'sendPlay' and 'jump' methods from MythTV.Frontend() ... ok
+
+----------------------------------------------------------------------
+Ran 8 tests in 45.197s
+
+OK
+test_Methodheap_MythBE_001_getPendingRecordings_01 (test.test_Methodheap_MythBE_001.test_Methodheap_MythBE_001)
+Test 'getPendingRecordings' method from MythTV.MythBE(). ... ok
+test_Methodheap_MythBE_002_getScheduledRecordings_01 (test.test_Methodheap_MythBE_001.test_Methodheap_MythBE_002)
+Test 'getScheduledRecordings' method from MythTV.MythBE(). ... ok
+test_Methodheap_MythBE_003_getUpcomingRecordings_01 (test.test_Methodheap_MythBE_001.test_Methodheap_MythBE_003)
+Test 'getUpcomingRecordings' method from MythTV.MythBE(). ... ok
+test_Methodheap_MythBE_004_getConflictedRecordings_01 (test.test_Methodheap_MythBE_001.test_Methodheap_MythBE_004)
+Test 'getConflictedRecordings' method from MythTV.MythBE(). ... ok
+test_Methodheap_MythBE_005_getRecorderList_01 (test.test_Methodheap_MythBE_001.test_Methodheap_MythBE_005)
+Test 'getRecorderList' method from MythTV.MythBE(). ... ok
+test_Methodheap_MythBE_006_getFreeRecorderList_01 (test.test_Methodheap_MythBE_001.test_Methodheap_MythBE_006)
+Test 'getFreeRecorderList' method from MythTV.MythBE(). ... ok
+test_Methodheap_MythBE_007_getFreeInputInfo_01 (test.test_Methodheap_MythBE_001.test_Methodheap_MythBE_007)
+Test 'getFreeInputInfo' method from MythTV.MythBE(). ... ok
+test_Methodheap_MythBE_009_getCurrentRecording_01 (test.test_Methodheap_MythBE_001.test_Methodheap_MythBE_009)
+Test 'getCurrentRecording' method from MythTV.MythBE(). ... ok
+test_Methodheap_MythBE_010_isRecording_01 (test.test_Methodheap_MythBE_001.test_Methodheap_MythBE_010)
+Test 'isRecording' method from MythTV.MythBE(). ... ok
+test_Methodheap_MythBE_011_isActiveBackend_01 (test.test_Methodheap_MythBE_001.test_Methodheap_MythBE_011)
+Test 'isActiveBackend' method from MythTV.MythBE(). ... ok
+test_Methodheap_MythBE_012_getRecordings_01 (test.test_Methodheap_MythBE_001.test_Methodheap_MythBE_012)
+Test 'getRecordings' method from MythTV.MythBE(). ... ok
+test_Methodheap_MythBE_013_getExpiring_01 (test.test_Methodheap_MythBE_001.test_Methodheap_MythBE_013)
+Test 'getExpiring' method from MythTV.MythBE(). ... ok
+test_Methodheap_MythBE_014_getExpiring_01 (test.test_Methodheap_MythBE_001.test_Methodheap_MythBE_014)
+Test 'getCheckfile' method from MythTV.MythBE(). ... ok
+test_Methodheap_MythBE_016_getFreeSpaceSummary_01 (test.test_Methodheap_MythBE_001.test_Methodheap_MythBE_016)
+Test 'getFreeSpaceSummary' method from MythTV.MythBE(). ... ok
+test_Methodheap_MythBE_017_getLoad_01 (test.test_Methodheap_MythBE_001.test_Methodheap_MythBE_017)
+Test 'getLoad' method from MythTV.MythBE(). ... ok
+test_Methodheap_MythBE_018_getUptime_01 (test.test_Methodheap_MythBE_001.test_Methodheap_MythBE_018)
+Test 'getUptime' method from MythTV.MythBE(). ... ok
+test_Methodheap_MythBE_019_walkSG_01 (test.test_Methodheap_MythBE_001.test_Methodheap_MythBE_019)
+Test 'walkSG' method from MythTV.MythBE(). ... ok
+test_Methodheap_MythBE_020_getSGList_01 (test.test_Methodheap_MythBE_001.test_Methodheap_MythBE_020)
+Test 'getSGList' method from MythTV.MythBE(). ... ok
+test_Methodheap_MythBE_020_getSGList_02 (test.test_Methodheap_MythBE_001.test_Methodheap_MythBE_020)
+Test 'getSGList' method from MythTV.MythBE(). ... ok
+test_Methodheap_MythBE_021_getSGFile_01 (test.test_Methodheap_MythBE_001.test_Methodheap_MythBE_021)
+Test 'getSGFile' method from MythTV.MythBE(). ... ok
+test_Methodheap_MythBE_101_getRecording_01 (test.test_Methodheap_MythBE_001.test_Methodheap_MythBE_101)
+Test 'getRecording' method from MythTV.MythBE() inherited from FileOps. ... ok
+test_Methodheap_MythBE_102_forgetRecording_01 (test.test_Methodheap_MythBE_001.test_Methodheap_MythBE_102)
+Test 'forgetRecording' method from MythTV.MythBE() inherited from FileOps. ... ok
+test_Methodheap_MythBE_103_deleteRecording_01 (test.test_Methodheap_MythBE_001.test_Methodheap_MythBE_103)
+Test 'deleteRecording' method from MythTV.MythBE() inherited from FileOps. ... ok
+test_Methodheap_MythBE_104_deleteFile_01 (test.test_Methodheap_MythBE_001.test_Methodheap_MythBE_104)
+Test 'deleteFile' method from MythTV.MythBE() inherited from FileOps. ... ok
+test_Methodheap_MythBE_105_getHash_01 (test.test_Methodheap_MythBE_001.test_Methodheap_MythBE_105)
+Test 'getHash' method from MythTV.MythBE() inherited from FileOps. ... ok
+test_Methodheap_MythBE_106_reschedule_01 (test.test_Methodheap_MythBE_001.test_Methodheap_MythBE_106)
+Test 'reschedule' method from MythTV.MythBE() inherited from FileOps. ... ok
+test_Methodheap_MythBE_106_reschedule_02 (test.test_Methodheap_MythBE_001.test_Methodheap_MythBE_106)
+Test 'reschedule' method from MythTV.MythBE() inherited from FileOps. ... ok
+test_Methodheap_MythBE_107_fileExists_01 (test.test_Methodheap_MythBE_001.test_Methodheap_MythBE_107)
+Test 'fileExists' method from MythTV.MythBE() inherited from FileOps. ... ok
+test_methodheap_mythbe_015_getFreeSpace_01 (test.test_Methodheap_MythBE_001.test_methodheap_mythbe_015)
+test 'getFreeSpace' method from mythtv.mythbe(). ... ok
+test_methodheap_mythbe_015_getFreeSpace_02 (test.test_Methodheap_MythBE_001.test_methodheap_mythbe_015)
+test 'getFreeSpace' method from mythtv.mythbe(). ... ok
+
+----------------------------------------------------------------------
+Ran 30 tests in 9.406s
+
+OK
+test_Methodheap_MythDB_001_searchRecorded_01 (test.test_Methodheap_MythDB_001.test_Methodheap_MythDB_001)
+Test 'seachRecorded' method from MythTV.MythDB() using 'chanid'. ... ok
+test_Methodheap_MythDB_001_searchRecorded_02 (test.test_Methodheap_MythDB_001.test_Methodheap_MythDB_001)
+Test 'seachRecorded' method from MythTV.MythDB() using 'chanid', 'title'. ... ok
+test_Methodheap_MythDB_001_searchRecorded_03 (test.test_Methodheap_MythDB_001.test_Methodheap_MythDB_001)
+Test 'seachRecorded' method from MythTV.MythDB() using 'newerthan'. ... ok
+test_Methodheap_MythDB_001_searchRecorded_04 (test.test_Methodheap_MythDB_001.test_Methodheap_MythDB_001)
+Test 'seachRecorded' method from MythTV.MythDB() using 'olderthan' and 'newerthan'. ... ok
+test_Methodheap_MythDB_001_searchRecorded_05 (test.test_Methodheap_MythDB_001.test_Methodheap_MythDB_001)
+Test 'seachRecorded' method from MythTV.MythDB() using 'olderthan' and 'newerthan'. ... ok
+test_Methodheap_MythDB_001_searchRecorded_06 (test.test_Methodheap_MythDB_001.test_Methodheap_MythDB_001)
+Test 'seachRecorded' method from MythTV.MythDB() using 'olderthan', ... ok
+test_Methodheap_MythDB_002_searchOldRecorded_01 (test.test_Methodheap_MythDB_001.test_Methodheap_MythDB_002)
+Test 'searchOldRecorded' method from MythTV.MythDB() via 'chanid'. ... ok
+test_Methodheap_MythDB_002_searchOldRecorded_02 (test.test_Methodheap_MythDB_001.test_Methodheap_MythDB_002)
+Test 'searchOldRecorded' method from MythTV.MythDB() via 'chanid', 'title'. ... ok
+test_Methodheap_MythDB_002_searchOldRecorded_03 (test.test_Methodheap_MythDB_001.test_Methodheap_MythDB_002)
+Test 'searchOldRecorded' method from MythTV.MythDB() ... ok
+test_Methodheap_MythDB_003_searchArtwork_01 (test.test_Methodheap_MythDB_001.test_Methodheap_MythDB_003)
+Test 'searchArtwork' method from MythTV.MythDB(). ... ok
+test_Methodheap_MythDB_003_searchArtwork_02 (test.test_Methodheap_MythDB_001.test_Methodheap_MythDB_003)
+Test 'searchArtwork' method from MythTV.MythDB(), ... ok
+test_Methodheap_MythDB_003_searchArtwork_03 (test.test_Methodheap_MythDB_001.test_Methodheap_MythDB_003)
+Test 'searchArtwork' method from MythTV.MythDB() by given inetref. ... ok
+test_Methodheap_MythDB_004_searchJobs_01 (test.test_Methodheap_MythDB_001.test_Methodheap_MythDB_004)
+Test 'searchJobs' method from MythTV.MythDB(). ... ok
+test_Methodheap_MythDB_005_searchGuide_01 (test.test_Methodheap_MythDB_001.test_Methodheap_MythDB_005)
+Test 'searchGuide' method from MythTV.MythDB(). ... ok
+test_Methodheap_MythDB_005_searchGuide_02 (test.test_Methodheap_MythDB_001.test_Methodheap_MythDB_005)
+Test 'searchGuide' method from MythTV.MythDB() using fuzzy title. ... ok
+test_Methodheap_MythDB_006_searchRecord_01 (test.test_Methodheap_MythDB_001.test_Methodheap_MythDB_006)
+Test 'searchRecord' method from MythTV.MythDB() ... ok
+test_Methodheap_MythDB_006_searchRecord_02 (test.test_Methodheap_MythDB_001.test_Methodheap_MythDB_006)
+Test 'searchRecord' method from MythTV.MythDB() ... ok
+test_Methodheap_MythDB_007_getFrontends_01 (test.test_Methodheap_MythDB_001.test_Methodheap_MythDB_007)
+Test 'getFrontends' method from MythTV.MythDB(). ... No frontend is connected to the MythTV's python bindings.
+ok
+test_Methodheap_MythDB_008_getFrontend_01 (test.test_Methodheap_MythDB_001.test_Methodheap_MythDB_008)
+Test 'getFrontend' method from MythTV.MythDB(). ... ok
+test_Methodheap_MythDB_009_scanVideos_01 (test.test_Methodheap_MythDB_001.test_Methodheap_MythDB_009)
+Test 'scanVideos' method from MythTV.MythDB(). ... ok
+test_Methodheap_MythDB_010_searchVideos_01 (test.test_Methodheap_MythDB_001.test_Methodheap_MythDB_010)
+Test 'searchVideos' method from MythTV.MythDB() ... ok
+test_Methodheap_MythDB_100_gethostnames_01 (test.test_Methodheap_MythDB_001.test_Methodheap_MythDB_100)
+Test 'gethostname' method from MythTV.MythDB() inherited from DBCache. ... ok
+test_Methodheap_MythDB_101_getMasterBackend_01 (test.test_Methodheap_MythDB_001.test_Methodheap_MythDB_101)
+Test 'getMasterBackend' method from MythTV.MythDB() inherited from DBCache. ... ok
+test_Methodheap_MythDB_102_getStorageGroup_01 (test.test_Methodheap_MythDB_001.test_Methodheap_MythDB_102)
+Test 'getStorageGroup' method from MythTV.MythDB() inherited from DBCache. ... ok
+
+----------------------------------------------------------------------
+Ran 24 tests in 1.603s
+
+OK
+test_test_Methodheap_MythSystemEvent_001_01 (test.test_Methodheap_MythSystemEvent_001.test_Methodheap_MythSystemEvent_001)
+Test if 'MythSystemEvent' calls a registered script for the ... ok
+
+----------------------------------------------------------------------
+Ran 1 test in 3.578s
+
+OK
+test_Methodheap_MythXML_001_01 (test.test_Methodheap_MythXML_001.test_Methodheap_MythXML_001)
+Test MythXML.getHosts(). ... ok
+test_Methodheap_MythXML_001_010 (test.test_Methodheap_MythXML_001.test_Methodheap_MythXML_001)
+Test MythXML.getRecorded() during standard time and ... ok
+test_Methodheap_MythXML_001_02 (test.test_Methodheap_MythXML_001.test_Methodheap_MythXML_001)
+Test MythXML.getKeys(). ... ok
+test_Methodheap_MythXML_001_03 (test.test_Methodheap_MythXML_001.test_Methodheap_MythXML_001)
+Test MythXML.getSetting(). ... ok
+test_Methodheap_MythXML_001_04 (test.test_Methodheap_MythXML_001.test_Methodheap_MythXML_001)
+Test MythXML.getProgramGuide() ... ok
+test_Methodheap_MythXML_001_05 (test.test_Methodheap_MythXML_001.test_Methodheap_MythXML_001)
+Test MythXML.getProgramDetails(). ... ok
+test_Methodheap_MythXML_001_06 (test.test_Methodheap_MythXML_001.test_Methodheap_MythXML_001)
+Test MythXML.getChannelIcon() ... ok
+test_Methodheap_MythXML_001_07 (test.test_Methodheap_MythXML_001.test_Methodheap_MythXML_001)
+Test MythXML.getRecorded(). ... ok
+test_Methodheap_MythXML_001_08 (test.test_Methodheap_MythXML_001.test_Methodheap_MythXML_001)
+Test MythXML.getExpiring(). ... ok
+test_Methodheap_MythXML_001_09 (test.test_Methodheap_MythXML_001.test_Methodheap_MythXML_001)
+Test MythXML.getPreviewImage(). ... ok
+
+----------------------------------------------------------------------
+Ran 10 tests in 13.675s
+
+OK
+test_Methodheap_MythXML_002_01 (test.test_Methodheap_MythXML_002.test_Methodheap_MythXML_002)
+Test MythXML.getHosts() with logging. ... ok
+test_Methodheap_MythXML_002_010 (test.test_Methodheap_MythXML_002.test_Methodheap_MythXML_002)
+Test MythXML.getRecorded() during standard time and ... ok
+test_Methodheap_MythXML_002_02 (test.test_Methodheap_MythXML_002.test_Methodheap_MythXML_002)
+Test MythXML.getKeys() with logging. ... ok
+test_Methodheap_MythXML_002_03 (test.test_Methodheap_MythXML_002.test_Methodheap_MythXML_002)
+Test MythXML.getSetting() with logging. ... ok
+test_Methodheap_MythXML_002_04 (test.test_Methodheap_MythXML_002.test_Methodheap_MythXML_002)
+Test MythXML.getProgramGuide()  with logging. ... ok
+test_Methodheap_MythXML_002_05 (test.test_Methodheap_MythXML_002.test_Methodheap_MythXML_002)
+Test MythXML.getProgramDetails()  with logging. ... ok
+test_Methodheap_MythXML_002_06 (test.test_Methodheap_MythXML_002.test_Methodheap_MythXML_002)
+Test MythXML.getChannelIcon() with logging. ... ok
+test_Methodheap_MythXML_002_07 (test.test_Methodheap_MythXML_002.test_Methodheap_MythXML_002)
+Test MythXML.getRecorded() with logging. ... ok
+test_Methodheap_MythXML_002_08 (test.test_Methodheap_MythXML_002.test_Methodheap_MythXML_002)
+Test MythXML.getExpiring() with logging. ... ok
+test_Methodheap_MythXML_002_09 (test.test_Methodheap_MythXML_002.test_Methodheap_MythXML_002)
+Test MythXML.getPreviewImage(). ... ok
+
+----------------------------------------------------------------------
+Ran 10 tests in 13.639s
+
+OK
+test_MSearch_001_01 (test.test_MSearch_001.test_MSearch_001)
+Test MSearch.search(). ... ok
+test_MSearch_001_02 (test.test_MSearch_001.test_MSearch_001)
+Test MSearch.searchMythBE(). ... ok
+test_MSearch_001_03 (test.test_MSearch_001.test_MSearch_001)
+Test MSearch.searchMythFE(). ... ok
+
+----------------------------------------------------------------------
+Ran 3 tests in 2.883s
+
+OK
+test_MSearch_002_01 (test.test_MSearch_002.test_MSearch_002)
+Test MSearch.search() logging. ... ok
+test_MSearch_002_02 (test.test_MSearch_002.test_MSearch_002)
+Test MSearch.searchMythBE() logging. ... ok
+test_MSearch_002_03 (test.test_MSearch_002.test_MSearch_002)
+Test MSearch.searchMythFE() logging. ... ok
+
+----------------------------------------------------------------------
+Ran 3 tests in 1.418s
+
+OK
+test_Mythproto_001_findfile_01 (test.test_Mythproto_001.test_Mythproto_001)
+Test 'findfile' method from MythTV mytproto. ... ok
+test_Mythproto_002_ftopen_01 (test.test_Mythproto_001.test_Mythproto_002)
+Test 'ftopen' method from MythTV mythproto.py with 'chanid', 'starttime'. ... Exception AttributeError: 'ftsock' in <bound method FileTransfer.__del__ of <open file 'myth://Temp@10.0.0.190/3002_20190622105000.mkv', mode 'w' at 0x7fb82aa67b90>> ignored
+ok
+test_Mythproto_003_ftopen_01 (test.test_Mythproto_001.test_Mythproto_003)
+Test 'ftopen' method from MythTV mythproto.py with 'chanid', 'starttime' ... ok
+test_Mythproto_004_ftopen_01 (test.test_Mythproto_001.test_Mythproto_004)
+Test 'ftopen' method from MythTV mythproto.py by calling ... ok
+test_Mythproto_005_ftopen_01 (test.test_Mythproto_001.test_Mythproto_005)
+Test 'ftopen' method from MythTV mythproto.py by calling ... Exception AttributeError: 'ftsock' in <bound method DownloadFileTransfer.__del__ of <open file 'myth://Temp@10.0.0.190//dltestfile', mode 'r' at 0x7fb829fc6350>> ignored
+ok
+
+----------------------------------------------------------------------
+Ran 5 tests in 191.558s
+
+OK
+test_system_001_01 (test.test_System_001.test_System_001)
+Test if 'System' executes 'echo' command. ... ok
+test_system_001_02 (test.test_System_001.test_System_001)
+Test if 'System' failes on 'exho' command. ... ok
+test_system_002_01 (test.test_System_001.test_System_002)
+Test if 'System.system' executes 'echo' command. ... ok
+test_system_002_02 (test.test_System_001.test_System_002)
+Test if 'System.system' failes on 'exho' command. ... ok
+test_system_002_03 (test.test_System_001.test_System_002)
+Test if 'System.system' executes command specified to report to 'stderr'. ... ok
+test_system_003_01 (test.test_System_001.test_System_003)
+Test if 'System.system' executes 'echo' command with unicode characters. ... ok
+
+----------------------------------------------------------------------
+Ran 6 tests in 0.521s
+
+OK
+(157, 0, 0)
+Coverage.py warning: No data was collected. (no-data-collected)
+
+$ python-coverage combine
+$ python-coverage report
+Name                               Stmts   Miss Branch BrPart  Cover
+--------------------------------------------------------------------
+MythTV/__init__.py                    20      0      0      0   100%
+MythTV/_conn_mysqldb.py               59     12     20      5    78%
+MythTV/_conn_oursql.py                37     33     12      0     8%
+MythTV/altdict.py                    169     51     59      9    71%
+MythTV/connections.py                423    145    121     22    63%
+MythTV/database.py                   894    317    384     69    60%
+MythTV/dataheap.py                   912    418    300     50    51%
+MythTV/exceptions.py                 126     94     52      7    23%
+MythTV/logging.py                    255    100    122     16    52%
+MythTV/methodheap.py                 651    194    282     65    63%
+MythTV/msearch.py                     69      7     26      7    83%
+MythTV/mythproto.py                  611    186    278     53    63%
+MythTV/services_api/__init__.py        1      1      0      0     0%
+MythTV/services_api/_version.py        1      1      0      0     0%
+MythTV/services_api/send.py          163    163     64      0     0%
+MythTV/services_api/utilities.py     129    129     22      0     0%
+MythTV/static.py                     235      0      0      0   100%
+MythTV/system.py                     279    124    134     18    47%
+MythTV/utility/__init__.py             7      0      0      0   100%
+MythTV/utility/altdict.py            103     75     14      0    24%
+MythTV/utility/dequebuffer.py        232     96     74     15    53%
+MythTV/utility/dicttoxml.py          200    200     88      0     0%
+MythTV/utility/dt.py                 315     47    138     23    80%
+MythTV/utility/enum.py                82     35     54     17    49%
+MythTV/utility/mixin.py              128    113     96      3     8%
+MythTV/utility/other.py              392    137    167     27    60%
+MythTV/utility/singleton.py           45     24     14      1    41%
+--------------------------------------------------------------------
+TOTAL                               6538   2702   2521    407    54%
+ 
+$ python-coverage html
+
+
