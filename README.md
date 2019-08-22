@@ -2,10 +2,14 @@
 Test Python Bindings of https://www.mythtv.org/
 
 ## Test Setup
+
 The tests itself run on a PC (PC1) from terminal:
+
     - needed software: python2 and python3, dependencies for MythtTV Python Bindings
     - valid MythTV's config.xml for the user running the tests
+
 The tests need a separate MythTV backend running on PC2 with all tuners available.
+
 Some tests need a MythTV frontend running on PC3 with enabled Network Remote Control Port on 6546.
 
 All PCs can be virtual machines as well connected via separate IP addresses.
