@@ -1790,17 +1790,17 @@
 <p id="t451" class="stm run hide_run"><span class="key">class</span> <span class="nam">MythSystemEvent</span><span class="op">(</span> <span class="nam">BECache</span> <span class="op">)</span><span class="op">:</span><span class="strut">&nbsp;</span></p>
 <p id="t452" class="stm run hide_run">    <span class="key">class</span> <span class="nam">systemeventhandler</span><span class="op">(</span> <span class="nam">object</span> <span class="op">)</span><span class="op">:</span><span class="strut">&nbsp;</span></p>
 <p id="t453" class="pln">        <span class="com"># decorator class for system events</span><span class="strut">&nbsp;</span></p>
-<p id="t454" class="stm run hide_run">        <span class="nam">bs</span> <span class="op">=</span> <span class="nam">BACKEND_SEP</span><span class="op">.</span><span class="nam">replace</span><span class="op">(</span><span class="str">'['</span><span class="op">,</span><span class="str">'\['</span><span class="op">)</span><span class="op">.</span><span class="nam">replace</span><span class="op">(</span><span class="str">']'</span><span class="op">,</span><span class="str">'\]'</span><span class="op">)</span><span class="strut">&nbsp;</span></p>
+<p id="t454" class="stm run hide_run">        <span class="nam">bs</span> <span class="op">=</span> <span class="nam">BACKEND_SEP</span><span class="op">.</span><span class="nam">replace</span><span class="op">(</span><span class="str">'['</span><span class="op">,</span><span class="str">r'\['</span><span class="op">)</span><span class="op">.</span><span class="nam">replace</span><span class="op">(</span><span class="str">']'</span><span class="op">,</span><span class="str">r'\]'</span><span class="op">)</span><span class="strut">&nbsp;</span></p>
 <p id="t455" class="stm run hide_run">        <span class="nam">re_process</span> <span class="op">=</span> <span class="nam">re</span><span class="op">.</span><span class="nam">compile</span><span class="op">(</span><span class="nam">bs</span><span class="op">.</span><span class="nam">join</span><span class="op">(</span><span class="op">[</span><span class="strut">&nbsp;</span></p>
-<p id="t456" class="pln">                <span class="str">'BACKEND_MESSAGE'</span><span class="op">,</span><span class="strut">&nbsp;</span></p>
-<p id="t457" class="pln">                <span class="str">'SYSTEM_EVENT (?P&lt;event>[A-Z0-9_]*)'</span><span class="strut">&nbsp;</span></p>
-<p id="t458" class="pln">                    <span class="str">'( HOSTNAME (?P&lt;hostname>[a-zA-Z0-9_\.]*))?'</span><span class="strut">&nbsp;</span></p>
-<p id="t459" class="pln">                    <span class="str">'( SENDER (?P&lt;sender>[a-zA-Z0-9_\.]*))?'</span><span class="strut">&nbsp;</span></p>
-<p id="t460" class="pln">                    <span class="str">'( CARDID (?P&lt;cardid>[0-9]*))?'</span><span class="strut">&nbsp;</span></p>
-<p id="t461" class="pln">                    <span class="str">'( CHANID (?P&lt;chanid>[0-9]*))?'</span><span class="strut">&nbsp;</span></p>
-<p id="t462" class="pln">                    <span class="str">'( STARTTIME (?P&lt;starttime>[0-9-]*T[0-9-]))?'</span><span class="strut">&nbsp;</span></p>
-<p id="t463" class="pln">                    <span class="str">'( SECS (?P&lt;secs>[0-9]*))?'</span><span class="op">,</span><span class="strut">&nbsp;</span></p>
-<p id="t464" class="pln">                <span class="str">'empty'</span><span class="op">]</span><span class="op">)</span><span class="op">)</span><span class="strut">&nbsp;</span></p>
+<p id="t456" class="pln">                <span class="str">r'BACKEND_MESSAGE'</span><span class="op">,</span><span class="strut">&nbsp;</span></p>
+<p id="t457" class="pln">                <span class="str">r'SYSTEM_EVENT (?P&lt;event>[A-Z0-9_]*)'</span><span class="strut">&nbsp;</span></p>
+<p id="t458" class="pln">                    <span class="str">r'( HOSTNAME (?P&lt;hostname>[a-zA-Z0-9_\.]*))?'</span><span class="strut">&nbsp;</span></p>
+<p id="t459" class="pln">                    <span class="str">r'( SENDER (?P&lt;sender>[a-zA-Z0-9_\.]*))?'</span><span class="strut">&nbsp;</span></p>
+<p id="t460" class="pln">                    <span class="str">r'( CARDID (?P&lt;cardid>[0-9]*))?'</span><span class="strut">&nbsp;</span></p>
+<p id="t461" class="pln">                    <span class="str">r'( CHANID (?P&lt;chanid>[0-9]*))?'</span><span class="strut">&nbsp;</span></p>
+<p id="t462" class="pln">                    <span class="str">r'( STARTTIME (?P&lt;starttime>[0-9-]*T[0-9-]))?'</span><span class="strut">&nbsp;</span></p>
+<p id="t463" class="pln">                    <span class="str">r'( SECS (?P&lt;secs>[0-9]*))?'</span><span class="op">,</span><span class="strut">&nbsp;</span></p>
+<p id="t464" class="pln">                <span class="str">r'empty'</span><span class="op">]</span><span class="op">)</span><span class="op">)</span><span class="strut">&nbsp;</span></p>
 <p id="t465" class="pln"><span class="strut">&nbsp;</span></p>
 <p id="t466" class="stm run hide_run">        <span class="key">def</span> <span class="nam">__init__</span><span class="op">(</span><span class="nam">self</span><span class="op">,</span> <span class="nam">func</span><span class="op">)</span><span class="op">:</span><span class="strut">&nbsp;</span></p>
 <p id="t467" class="stm run hide_run">            <span class="nam">self</span><span class="op">.</span><span class="nam">func</span> <span class="op">=</span> <span class="nam">func</span><span class="strut">&nbsp;</span></p>
@@ -2482,7 +2482,7 @@
 <p id="t1143" class="stm par run hide_run"><span class="annotate short">1143&#x202F;&#x219B;&#x202F;1146</span><span class="annotate long">line 1143 didn't jump to line 1146, because the condition on line 1143 was never false</span>        <span class="key">if</span> <span class="nam">backend</span> <span class="key">is</span> <span class="nam">None</span><span class="op">:</span><span class="strut">&nbsp;</span></p>
 <p id="t1144" class="pln">            <span class="com"># use master backend</span><span class="strut">&nbsp;</span></p>
 <p id="t1145" class="stm run hide_run">            <span class="nam">backend</span> <span class="op">=</span> <span class="nam">self</span><span class="op">.</span><span class="nam">db</span><span class="op">.</span><span class="nam">settings</span><span class="op">.</span><span class="nam">NULL</span><span class="op">.</span><span class="nam">MasterServerIP</span><span class="strut">&nbsp;</span></p>
-<p id="t1146" class="stm par run hide_run"><span class="annotate short">1146&#x202F;&#x219B;&#x202F;1154</span><span class="annotate long">line 1146 didn't jump to line 1154, because the condition on line 1146 was never false</span>        <span class="key">if</span> <span class="nam">re</span><span class="op">.</span><span class="nam">match</span><span class="op">(</span><span class="str">'(?:\d{1,3}\.){3}\d{1,3}'</span><span class="op">,</span><span class="nam">backend</span><span class="op">)</span> <span class="key">or</span> <span class="xx">\</span><span class="strut">&nbsp;</span></p>
+<p id="t1146" class="stm par run hide_run"><span class="annotate short">1146&#x202F;&#x219B;&#x202F;1154</span><span class="annotate long">line 1146 didn't jump to line 1154, because the condition on line 1146 was never false</span>        <span class="key">if</span> <span class="nam">re</span><span class="op">.</span><span class="nam">match</span><span class="op">(</span><span class="str">r'(?:\d{1,3}\.){3}\d{1,3}'</span><span class="op">,</span><span class="nam">backend</span><span class="op">)</span> <span class="key">or</span> <span class="xx">\</span><span class="strut">&nbsp;</span></p>
 <p id="t1147" class="pln">                    <span class="nam">check_ipv6</span><span class="op">(</span><span class="nam">backend</span><span class="op">)</span><span class="op">:</span><span class="strut">&nbsp;</span></p>
 <p id="t1148" class="pln">            <span class="com"># process ip address</span><span class="strut">&nbsp;</span></p>
 <p id="t1149" class="stm run hide_run">            <span class="nam">host</span> <span class="op">=</span> <span class="nam">self</span><span class="op">.</span><span class="nam">db</span><span class="op">.</span><span class="nam">_gethostfromaddr</span><span class="op">(</span><span class="nam">backend</span><span class="op">)</span><span class="strut">&nbsp;</span></p>
@@ -2638,7 +2638,7 @@
     <div class="content">
         <p>
             <a class="nav" href="index.html">&#xab; index</a> &nbsp; &nbsp; <a class="nav" href="https://coverage.readthedocs.io">coverage.py v4.5</a>,
-            created at 2019-08-17 17:57
+            created at 2019-08-24 15:46
         </p>
     </div>
 </div>

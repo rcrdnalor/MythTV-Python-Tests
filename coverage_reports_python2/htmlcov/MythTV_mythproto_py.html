@@ -33,7 +33,7 @@
             <span class="exc shortkey_x button_toggle_exc">0 excluded</span>
 
             
-                <span class="par run hide_run shortkey_p button_toggle_par">52 partial</span>
+                <span class="par run hide_run shortkey_p button_toggle_par">50 partial</span>
             
         </h2>
     </div>
@@ -772,7 +772,7 @@
 <p id="n727" class="pln"><a href="#n727">727</a></p>
 <p id="n728" class="stm run hide_run"><a href="#n728">728</a></p>
 <p id="n729" class="pln"><a href="#n729">729</a></p>
-<p id="n730" class="stm par run hide_run"><a href="#n730">730</a></p>
+<p id="n730" class="stm run hide_run"><a href="#n730">730</a></p>
 <p id="n731" class="stm run hide_run"><a href="#n731">731</a></p>
 <p id="n732" class="pln"><a href="#n732">732</a></p>
 <p id="n733" class="pln"><a href="#n733">733</a></p>
@@ -785,7 +785,7 @@
 <p id="n740" class="pln"><a href="#n740">740</a></p>
 <p id="n741" class="stm par run hide_run"><a href="#n741">741</a></p>
 <p id="n742" class="stm mis"><a href="#n742">742</a></p>
-<p id="n743" class="stm par run hide_run"><a href="#n743">743</a></p>
+<p id="n743" class="stm run hide_run"><a href="#n743">743</a></p>
 <p id="n744" class="stm run hide_run"><a href="#n744">744</a></p>
 <p id="n745" class="stm run hide_run"><a href="#n745">745</a></p>
 <p id="n746" class="pln"><a href="#n746">746</a></p>
@@ -1201,7 +1201,7 @@
 <p id="t58" class="pln"><span class="strut">&nbsp;</span></p>
 <p id="t59" class="stm run hide_run">    <span class="nam">logmodule</span> <span class="op">=</span> <span class="str">'Python Backend Connection'</span><span class="strut">&nbsp;</span></p>
 <p id="t60" class="stm run hide_run">    <span class="nam">_shared</span> <span class="op">=</span> <span class="nam">weakref</span><span class="op">.</span><span class="nam">WeakValueDictionary</span><span class="op">(</span><span class="op">)</span><span class="strut">&nbsp;</span></p>
-<p id="t61" class="stm run hide_run">    <span class="nam">_reip</span> <span class="op">=</span> <span class="nam">re</span><span class="op">.</span><span class="nam">compile</span><span class="op">(</span><span class="str">'(?:\d{1,3}\.){3}\d{1,3}'</span><span class="op">)</span><span class="strut">&nbsp;</span></p>
+<p id="t61" class="stm run hide_run">    <span class="nam">_reip</span> <span class="op">=</span> <span class="nam">re</span><span class="op">.</span><span class="nam">compile</span><span class="op">(</span><span class="str">r'(?:\d{1,3}\.){3}\d{1,3}'</span><span class="op">)</span><span class="strut">&nbsp;</span></p>
 <p id="t62" class="pln"><span class="strut">&nbsp;</span></p>
 <p id="t63" class="stm run hide_run">    <span class="key">def</span> <span class="nam">__repr__</span><span class="op">(</span><span class="nam">self</span><span class="op">)</span><span class="op">:</span><span class="strut">&nbsp;</span></p>
 <p id="t64" class="stm mis">        <span class="key">return</span> <span class="str">"&lt;%s 'myth://%s:%d/' at %s>"</span> <span class="op">%</span> <span class="xx">\</span><span class="strut">&nbsp;</span></p>
@@ -1360,8 +1360,8 @@
 <p id="t217" class="stm run hide_run">    <span class="nam">db</span> <span class="op">=</span> <span class="nam">DBCache</span><span class="op">(</span><span class="nam">db</span><span class="op">)</span><span class="strut">&nbsp;</span></p>
 <p id="t218" class="stm run hide_run">    <span class="nam">log</span> <span class="op">=</span> <span class="nam">MythLog</span><span class="op">(</span><span class="str">'Python File Transfer'</span><span class="op">,</span> <span class="nam">db</span><span class="op">=</span><span class="nam">db</span><span class="op">)</span><span class="strut">&nbsp;</span></p>
 <p id="t219" class="stm run hide_run">    <span class="nam">reuri</span> <span class="op">=</span> <span class="nam">re</span><span class="op">.</span><span class="nam">compile</span><span class="op">(</span><span class="xx">\</span><span class="strut">&nbsp;</span></p>
-<p id="t220" class="pln">        <span class="str">'myth://((?P&lt;group>.*)@)?(?P&lt;host>[\[\]a-zA-Z0-9_\-\.]*)(:[0-9]*)?/(?P&lt;file>.*)'</span><span class="op">)</span><span class="strut">&nbsp;</span></p>
-<p id="t221" class="stm run hide_run">    <span class="nam">reip</span> <span class="op">=</span> <span class="nam">re</span><span class="op">.</span><span class="nam">compile</span><span class="op">(</span><span class="str">'(?:\d{1,3}\.){3}\d{1,3}'</span><span class="op">)</span><span class="strut">&nbsp;</span></p>
+<p id="t220" class="pln">        <span class="str">r'myth://((?P&lt;group>.*)@)?(?P&lt;host>[\[\]a-zA-Z0-9_\-\.]*)(:[0-9]*)?/(?P&lt;file>.*)'</span><span class="op">)</span><span class="strut">&nbsp;</span></p>
+<p id="t221" class="stm run hide_run">    <span class="nam">reip</span> <span class="op">=</span> <span class="nam">re</span><span class="op">.</span><span class="nam">compile</span><span class="op">(</span><span class="str">r'(?:\d{1,3}\.){3}\d{1,3}'</span><span class="op">)</span><span class="strut">&nbsp;</span></p>
 <p id="t222" class="pln"><span class="strut">&nbsp;</span></p>
 <p id="t223" class="stm par run hide_run"><span class="annotate short">223&#x202F;&#x219B;&#x202F;224</span><span class="annotate long">line 223 didn't jump to line 224, because the condition on line 223 was never true</span>    <span class="key">if</span> <span class="nam">mode</span> <span class="key">not</span> <span class="key">in</span> <span class="op">(</span><span class="str">'r'</span><span class="op">,</span><span class="str">'w'</span><span class="op">)</span><span class="op">:</span><span class="strut">&nbsp;</span></p>
 <p id="t224" class="stm mis">        <span class="key">raise</span> <span class="nam">TypeError</span><span class="op">(</span><span class="str">"File I/O must be of type 'r' or 'w'"</span><span class="op">)</span><span class="strut">&nbsp;</span></p>
@@ -1870,7 +1870,7 @@
 <p id="t727" class="pln"><span class="strut">&nbsp;</span></p>
 <p id="t728" class="stm run hide_run">    <span class="key">def</span> <span class="nam">downloadTo</span><span class="op">(</span><span class="nam">self</span><span class="op">,</span> <span class="nam">url</span><span class="op">,</span> <span class="nam">storagegroup</span><span class="op">,</span> <span class="nam">filename</span><span class="op">,</span> <span class="xx">\</span><span class="strut">&nbsp;</span></p>
 <p id="t729" class="pln">                         <span class="nam">forceremote</span><span class="op">=</span><span class="nam">False</span><span class="op">,</span> <span class="nam">openfile</span><span class="op">=</span><span class="nam">False</span><span class="op">)</span><span class="op">:</span><span class="strut">&nbsp;</span></p>
-<p id="t730" class="stm par run hide_run"><span class="annotate short">730&#x202F;&#x219B;&#x202F;736</span><span class="annotate long">line 730 didn't jump to line 736, because the condition on line 730 was never false</span>        <span class="key">if</span> <span class="nam">openfile</span><span class="op">:</span><span class="strut">&nbsp;</span></p>
+<p id="t730" class="stm run hide_run">        <span class="key">if</span> <span class="nam">openfile</span><span class="op">:</span><span class="strut">&nbsp;</span></p>
 <p id="t731" class="stm run hide_run">            <span class="nam">eventlock</span> <span class="op">=</span> <span class="nam">self</span><span class="op">.</span><span class="nam">allocateEventLock</span><span class="op">(</span><span class="xx">\</span><span class="strut">&nbsp;</span></p>
 <p id="t732" class="pln">                    <span class="nam">re</span><span class="op">.</span><span class="nam">escape</span><span class="op">(</span><span class="nam">BACKEND_SEP</span><span class="op">)</span><span class="op">.</span><span class="xx">\</span><span class="strut">&nbsp;</span></p>
 <p id="t733" class="pln">                            <span class="nam">join</span><span class="op">(</span><span class="op">[</span><span class="str">'BACKEND_MESSAGE'</span><span class="op">,</span><span class="strut">&nbsp;</span></p>
@@ -1883,7 +1883,7 @@
 <p id="t740" class="pln">                    <span class="nam">split</span><span class="op">(</span><span class="nam">BACKEND_SEP</span><span class="op">)</span><span class="strut">&nbsp;</span></p>
 <p id="t741" class="stm par run hide_run"><span class="annotate short">741&#x202F;&#x219B;&#x202F;742</span><span class="annotate long">line 741 didn't jump to line 742, because the condition on line 741 was never true</span>        <span class="key">if</span> <span class="nam">res</span><span class="op">[</span><span class="num">0</span><span class="op">]</span> <span class="op">!=</span> <span class="str">'OK'</span><span class="op">:</span><span class="strut">&nbsp;</span></p>
 <p id="t742" class="stm mis">            <span class="key">raise</span> <span class="nam">MythBEError</span><span class="op">(</span><span class="str">'Download failed'</span><span class="op">)</span><span class="strut">&nbsp;</span></p>
-<p id="t743" class="stm par run hide_run"><span class="annotate short">743&#x202F;&#x219B;&#x202F;exit</span><span class="annotate long">line 743 didn't return from function 'downloadTo', because the condition on line 743 was never false</span>        <span class="key">if</span> <span class="nam">openfile</span><span class="op">:</span><span class="strut">&nbsp;</span></p>
+<p id="t743" class="stm run hide_run">        <span class="key">if</span> <span class="nam">openfile</span><span class="op">:</span><span class="strut">&nbsp;</span></p>
 <p id="t744" class="stm run hide_run">            <span class="nam">eventlock</span><span class="op">.</span><span class="nam">wait</span><span class="op">(</span><span class="op">)</span><span class="strut">&nbsp;</span></p>
 <p id="t745" class="stm run hide_run">            <span class="key">return</span> <span class="nam">ftopen</span><span class="op">(</span><span class="nam">res</span><span class="op">[</span><span class="num">1</span><span class="op">]</span><span class="op">,</span> <span class="str">'r'</span><span class="op">,</span> <span class="nam">forceremote</span><span class="op">,</span> <span class="nam">db</span><span class="op">=</span><span class="nam">self</span><span class="op">.</span><span class="nam">db</span><span class="op">,</span> <span class="nam">download</span><span class="op">=</span><span class="nam">True</span><span class="op">)</span><span class="strut">&nbsp;</span></p>
 <p id="t746" class="pln"><span class="strut">&nbsp;</span></p>
@@ -2246,7 +2246,7 @@
     <div class="content">
         <p>
             <a class="nav" href="index.html">&#xab; index</a> &nbsp; &nbsp; <a class="nav" href="https://coverage.readthedocs.io">coverage.py v4.5</a>,
-            created at 2019-08-17 17:57
+            created at 2019-08-24 16:01
         </p>
     </div>
 </div>

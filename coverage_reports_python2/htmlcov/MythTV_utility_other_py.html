@@ -8,7 +8,7 @@
     
     
     <meta http-equiv="X-UA-Compatible" content="IE=emulateIE7" />
-    <title>Coverage for MythTV/utility/other.py: 60%</title>
+    <title>Coverage for MythTV/utility/other.py: 63%</title>
     <link rel="stylesheet" href="style.css" type="text/css">
     
     <script type="text/javascript" src="jquery.min.js"></script>
@@ -23,17 +23,17 @@
 <div id="header">
     <div class="content">
         <h1>Coverage for <b>MythTV/utility/other.py</b> :
-            <span class="pc_cov">60%</span>
+            <span class="pc_cov">63%</span>
         </h1>
 
         <h2 class="stats">
             392 statements &nbsp;
-            <span class="run hide_run shortkey_r button_toggle_run">255 run</span>
-            <span class="mis shortkey_m button_toggle_mis">137 missing</span>
+            <span class="run hide_run shortkey_r button_toggle_run">267 run</span>
+            <span class="mis shortkey_m button_toggle_mis">125 missing</span>
             <span class="exc shortkey_x button_toggle_exc">0 excluded</span>
 
             
-                <span class="par run hide_run shortkey_p button_toggle_par">27 partial</span>
+                <span class="par run hide_run shortkey_p button_toggle_par">29 partial</span>
             
         </h2>
     </div>
@@ -476,22 +476,22 @@
 <p id="n431" class="stm run hide_run"><a href="#n431">431</a></p>
 <p id="n432" class="pln"><a href="#n432">432</a></p>
 <p id="n433" class="pln"><a href="#n433">433</a></p>
-<p id="n434" class="stm mis"><a href="#n434">434</a></p>
+<p id="n434" class="stm par run hide_run"><a href="#n434">434</a></p>
 <p id="n435" class="stm mis"><a href="#n435">435</a></p>
-<p id="n436" class="stm mis"><a href="#n436">436</a></p>
+<p id="n436" class="stm par run hide_run"><a href="#n436">436</a></p>
 <p id="n437" class="stm mis"><a href="#n437">437</a></p>
 <p id="n438" class="pln"><a href="#n438">438</a></p>
-<p id="n439" class="stm mis"><a href="#n439">439</a></p>
-<p id="n440" class="stm mis"><a href="#n440">440</a></p>
-<p id="n441" class="stm mis"><a href="#n441">441</a></p>
-<p id="n442" class="stm mis"><a href="#n442">442</a></p>
-<p id="n443" class="stm mis"><a href="#n443">443</a></p>
-<p id="n444" class="stm mis"><a href="#n444">444</a></p>
-<p id="n445" class="stm mis"><a href="#n445">445</a></p>
-<p id="n446" class="stm mis"><a href="#n446">446</a></p>
-<p id="n447" class="stm mis"><a href="#n447">447</a></p>
+<p id="n439" class="stm run hide_run"><a href="#n439">439</a></p>
+<p id="n440" class="stm run hide_run"><a href="#n440">440</a></p>
+<p id="n441" class="stm run hide_run"><a href="#n441">441</a></p>
+<p id="n442" class="stm run hide_run"><a href="#n442">442</a></p>
+<p id="n443" class="stm run hide_run"><a href="#n443">443</a></p>
+<p id="n444" class="stm run hide_run"><a href="#n444">444</a></p>
+<p id="n445" class="stm run hide_run"><a href="#n445">445</a></p>
+<p id="n446" class="stm run hide_run"><a href="#n446">446</a></p>
+<p id="n447" class="stm run hide_run"><a href="#n447">447</a></p>
 <p id="n448" class="pln"><a href="#n448">448</a></p>
-<p id="n449" class="stm mis"><a href="#n449">449</a></p>
+<p id="n449" class="stm run hide_run"><a href="#n449">449</a></p>
 <p id="n450" class="pln"><a href="#n450">450</a></p>
 <p id="n451" class="stm run hide_run"><a href="#n451">451</a></p>
 <p id="n452" class="stm run hide_run"><a href="#n452">452</a></p>
@@ -1098,22 +1098,22 @@
 <p id="t431" class="stm run hide_run"><span class="key">def</span> <span class="nam">levenshtein</span><span class="op">(</span><span class="nam">s1</span><span class="op">,</span> <span class="nam">s2</span><span class="op">)</span><span class="op">:</span><span class="strut">&nbsp;</span></p>
 <p id="t432" class="pln">    <span class="str">"""Compute the Levenshtein distance of two strings."""</span><span class="strut">&nbsp;</span></p>
 <p id="t433" class="pln">    <span class="com"># http://en.wikibooks.org/wiki/Algorithm_implementation/Strings/Levenshtein_distance</span><span class="strut">&nbsp;</span></p>
-<p id="t434" class="stm mis">    <span class="key">if</span> <span class="nam">len</span><span class="op">(</span><span class="nam">s1</span><span class="op">)</span> <span class="op">&lt;</span> <span class="nam">len</span><span class="op">(</span><span class="nam">s2</span><span class="op">)</span><span class="op">:</span><span class="strut">&nbsp;</span></p>
+<p id="t434" class="stm par run hide_run"><span class="annotate short">434&#x202F;&#x219B;&#x202F;435</span><span class="annotate long">line 434 didn't jump to line 435, because the condition on line 434 was never true</span>    <span class="key">if</span> <span class="nam">len</span><span class="op">(</span><span class="nam">s1</span><span class="op">)</span> <span class="op">&lt;</span> <span class="nam">len</span><span class="op">(</span><span class="nam">s2</span><span class="op">)</span><span class="op">:</span><span class="strut">&nbsp;</span></p>
 <p id="t435" class="stm mis">        <span class="key">return</span> <span class="nam">levenshtein</span><span class="op">(</span><span class="nam">s2</span><span class="op">,</span> <span class="nam">s1</span><span class="op">)</span><span class="strut">&nbsp;</span></p>
-<p id="t436" class="stm mis">    <span class="key">if</span> <span class="key">not</span> <span class="nam">s1</span><span class="op">:</span><span class="strut">&nbsp;</span></p>
+<p id="t436" class="stm par run hide_run"><span class="annotate short">436&#x202F;&#x219B;&#x202F;437</span><span class="annotate long">line 436 didn't jump to line 437, because the condition on line 436 was never true</span>    <span class="key">if</span> <span class="key">not</span> <span class="nam">s1</span><span class="op">:</span><span class="strut">&nbsp;</span></p>
 <p id="t437" class="stm mis">        <span class="key">return</span> <span class="nam">len</span><span class="op">(</span><span class="nam">s2</span><span class="op">)</span><span class="strut">&nbsp;</span></p>
 <p id="t438" class="pln"><span class="strut">&nbsp;</span></p>
-<p id="t439" class="stm mis">    <span class="nam">previous_row</span> <span class="op">=</span> <span class="nam">range</span><span class="op">(</span><span class="nam">len</span><span class="op">(</span><span class="nam">s2</span><span class="op">)</span> <span class="op">+</span> <span class="num">1</span><span class="op">)</span><span class="strut">&nbsp;</span></p>
-<p id="t440" class="stm mis">    <span class="key">for</span> <span class="nam">i</span><span class="op">,</span> <span class="nam">c1</span> <span class="key">in</span> <span class="nam">enumerate</span><span class="op">(</span><span class="nam">s1</span><span class="op">)</span><span class="op">:</span><span class="strut">&nbsp;</span></p>
-<p id="t441" class="stm mis">        <span class="nam">current_row</span> <span class="op">=</span> <span class="op">[</span><span class="nam">i</span> <span class="op">+</span> <span class="num">1</span><span class="op">]</span><span class="strut">&nbsp;</span></p>
-<p id="t442" class="stm mis">        <span class="key">for</span> <span class="nam">j</span><span class="op">,</span> <span class="nam">c2</span> <span class="key">in</span> <span class="nam">enumerate</span><span class="op">(</span><span class="nam">s2</span><span class="op">)</span><span class="op">:</span><span class="strut">&nbsp;</span></p>
-<p id="t443" class="stm mis">            <span class="nam">insertions</span> <span class="op">=</span> <span class="nam">previous_row</span><span class="op">[</span><span class="nam">j</span> <span class="op">+</span> <span class="num">1</span><span class="op">]</span> <span class="op">+</span> <span class="num">1</span><span class="strut">&nbsp;</span></p>
-<p id="t444" class="stm mis">            <span class="nam">deletions</span> <span class="op">=</span> <span class="nam">current_row</span><span class="op">[</span><span class="nam">j</span><span class="op">]</span> <span class="op">+</span> <span class="num">1</span><span class="strut">&nbsp;</span></p>
-<p id="t445" class="stm mis">            <span class="nam">substitutions</span> <span class="op">=</span> <span class="nam">previous_row</span><span class="op">[</span><span class="nam">j</span><span class="op">]</span> <span class="op">+</span> <span class="op">(</span><span class="nam">c1</span> <span class="op">!=</span> <span class="nam">c2</span><span class="op">)</span><span class="strut">&nbsp;</span></p>
-<p id="t446" class="stm mis">            <span class="nam">current_row</span><span class="op">.</span><span class="nam">append</span><span class="op">(</span><span class="nam">min</span><span class="op">(</span><span class="nam">insertions</span><span class="op">,</span> <span class="nam">deletions</span><span class="op">,</span> <span class="nam">substitutions</span><span class="op">)</span><span class="op">)</span><span class="strut">&nbsp;</span></p>
-<p id="t447" class="stm mis">        <span class="nam">previous_row</span> <span class="op">=</span> <span class="nam">current_row</span><span class="strut">&nbsp;</span></p>
+<p id="t439" class="stm run hide_run">    <span class="nam">previous_row</span> <span class="op">=</span> <span class="nam">range</span><span class="op">(</span><span class="nam">len</span><span class="op">(</span><span class="nam">s2</span><span class="op">)</span> <span class="op">+</span> <span class="num">1</span><span class="op">)</span><span class="strut">&nbsp;</span></p>
+<p id="t440" class="stm run hide_run">    <span class="key">for</span> <span class="nam">i</span><span class="op">,</span> <span class="nam">c1</span> <span class="key">in</span> <span class="nam">enumerate</span><span class="op">(</span><span class="nam">s1</span><span class="op">)</span><span class="op">:</span><span class="strut">&nbsp;</span></p>
+<p id="t441" class="stm run hide_run">        <span class="nam">current_row</span> <span class="op">=</span> <span class="op">[</span><span class="nam">i</span> <span class="op">+</span> <span class="num">1</span><span class="op">]</span><span class="strut">&nbsp;</span></p>
+<p id="t442" class="stm run hide_run">        <span class="key">for</span> <span class="nam">j</span><span class="op">,</span> <span class="nam">c2</span> <span class="key">in</span> <span class="nam">enumerate</span><span class="op">(</span><span class="nam">s2</span><span class="op">)</span><span class="op">:</span><span class="strut">&nbsp;</span></p>
+<p id="t443" class="stm run hide_run">            <span class="nam">insertions</span> <span class="op">=</span> <span class="nam">previous_row</span><span class="op">[</span><span class="nam">j</span> <span class="op">+</span> <span class="num">1</span><span class="op">]</span> <span class="op">+</span> <span class="num">1</span><span class="strut">&nbsp;</span></p>
+<p id="t444" class="stm run hide_run">            <span class="nam">deletions</span> <span class="op">=</span> <span class="nam">current_row</span><span class="op">[</span><span class="nam">j</span><span class="op">]</span> <span class="op">+</span> <span class="num">1</span><span class="strut">&nbsp;</span></p>
+<p id="t445" class="stm run hide_run">            <span class="nam">substitutions</span> <span class="op">=</span> <span class="nam">previous_row</span><span class="op">[</span><span class="nam">j</span><span class="op">]</span> <span class="op">+</span> <span class="op">(</span><span class="nam">c1</span> <span class="op">!=</span> <span class="nam">c2</span><span class="op">)</span><span class="strut">&nbsp;</span></p>
+<p id="t446" class="stm run hide_run">            <span class="nam">current_row</span><span class="op">.</span><span class="nam">append</span><span class="op">(</span><span class="nam">min</span><span class="op">(</span><span class="nam">insertions</span><span class="op">,</span> <span class="nam">deletions</span><span class="op">,</span> <span class="nam">substitutions</span><span class="op">)</span><span class="op">)</span><span class="strut">&nbsp;</span></p>
+<p id="t447" class="stm run hide_run">        <span class="nam">previous_row</span> <span class="op">=</span> <span class="nam">current_row</span><span class="strut">&nbsp;</span></p>
 <p id="t448" class="pln"><span class="strut">&nbsp;</span></p>
-<p id="t449" class="stm mis">    <span class="key">return</span> <span class="nam">previous_row</span><span class="op">[</span><span class="op">-</span><span class="num">1</span><span class="op">]</span><span class="strut">&nbsp;</span></p>
+<p id="t449" class="stm run hide_run">    <span class="key">return</span> <span class="nam">previous_row</span><span class="op">[</span><span class="op">-</span><span class="num">1</span><span class="op">]</span><span class="strut">&nbsp;</span></p>
 <p id="t450" class="pln"><span class="strut">&nbsp;</span></p>
 <p id="t451" class="stm run hide_run"><span class="key">class</span> <span class="nam">ParseEnum</span><span class="op">(</span> <span class="nam">object</span> <span class="op">)</span><span class="op">:</span><span class="strut">&nbsp;</span></p>
 <p id="t452" class="stm run hide_run">    <span class="nam">_static</span> <span class="op">=</span> <span class="nam">None</span><span class="strut">&nbsp;</span></p>
@@ -1294,7 +1294,7 @@
     <div class="content">
         <p>
             <a class="nav" href="index.html">&#xab; index</a> &nbsp; &nbsp; <a class="nav" href="https://coverage.readthedocs.io">coverage.py v4.5</a>,
-            created at 2019-08-17 17:57
+            created at 2019-08-24 15:46
         </p>
     </div>
 </div>

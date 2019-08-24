@@ -8,3 +8,4 @@ omit =
     test/*
     MythTV/ttvdb/*
     MythTV/wikiscripts/*
+    MythTV/services_api/*

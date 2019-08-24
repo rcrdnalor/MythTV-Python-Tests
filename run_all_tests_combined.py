@@ -12,7 +12,7 @@ test_modules =  [
                 , "test_Dataheap_Video_001"
                 , "test_Dataheap_Video_002"
                 , "test_Dataheap_Video_003"
-#                , "test_Dataheap_VideoGrabber_001"
+                , "test_Dataheap_VideoGrabber_001"
                 , "test_datetime_001"
                 , "test_datetime_002"
                 , "test_DictData_001"
