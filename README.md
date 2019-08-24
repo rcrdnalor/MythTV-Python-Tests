@@ -167,6 +167,32 @@ Change to the python folder:
 $ cd mythtv/bindings/python/
 ```
 
+Set the pythonpath to the folder holding the bindings "MythTV":
+Example:
+```
+$ export PYTHONPATH=`pwd`
+```
+
+Create a symlink for tmdb3
+```
+$ cd MythTV
+$ ln -s ../tmdb3/tmdb3 tmdb3
+```
+
+Create symlink for the metadata grabber scripts:
+
+Note: This is needed for testing the 'tmdb3' api together with the 'MythTV' bindings. 
+```
+$ mkdir -p $PYTHONPATH/share/mythtv
+$ ln -s $PYTHONPATH/../../programs/scripts/metadata $PYTHONPATH/share/mythtv/
+```
+
+Clear the tmdb3 cache and python '*.pyc' files:
+```
+$ ./empy_pytmdb3_cache.sh
+$ ./delete_pycs.sh
+```
+
 Run a single test without coverage:
 ```
 $ python -m unittest -v test.test_System_001
@@ -188,6 +214,8 @@ This reports "(testruns, failures, errors)"
 
 Run a combined test with coverage:
 ```
+$ ./empy_pytmdb3_cache.sh
+$ ./delete_pycs.sh
 $ python-coverage erase
 $ python-coverage run --parallel-mode --concurrency=multiprocessing run_all_tests_combined.py
 $ python-coverage combine
@@ -255,6 +283,7 @@ Solution: Downgrade python-urllib3 to version 1.22
 
 
 Don't forget to delete all byte code files of python (*.pyc) before running any test with python2 and python3:
+
 Run
 ```
 $ find . -name "*.pyc" -type f -delete
