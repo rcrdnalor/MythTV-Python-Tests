@@ -214,6 +214,7 @@ This reports "(testruns, failures, errors)"
 
 Run a combined test with coverage:
 ```
+$ export PYTHONPATH=`pwd`
 $ ./empy_pytmdb3_cache.sh
 $ ./delete_pycs.sh
 $ python-coverage erase
