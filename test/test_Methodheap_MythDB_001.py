@@ -272,6 +272,11 @@ class test_Methodheap_MythDB_005(unittest.TestCase):
         guide =  next(self.mydb.searchGuide())
         self.assertTrue(isinstance(guide, Guide))
 
+        # test '__repr__' and '__str__'
+        print()
+        print(repr(guide))
+        print(str(guide))
+
 
     def test_Methodheap_MythDB_005_searchGuide_02(self):
         """Test 'searchGuide' method from MythTV.MythDB() using fuzzy title.

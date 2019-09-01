@@ -33,6 +33,7 @@ test_modules =  [
                 , "test_MSearch_002"
                 , "test_Mythproto_001"
                 , "test_System_001"
+                , "test_repr_001"
                 ]
 
 

@@ -29,17 +29,18 @@ declare -a test_modules=( \
 "test_MSearch_002" \
 "test_Mythproto_001" \
 "test_System_001" \
+"test_repr_001" \
 )
 
 
 # erase last coverage
-python2-coverage erase
+python-coverage erase
 
 # run coverage on all defined modules and add results
 for m in ${test_modules[@]}; do
-    python2-coverage run -a -m unittest -v test.$m
+    python-coverage run -a -m unittest -v test.$m
 done
 
-python2-coverage report
+python-coverage report
 
-python2-coverage html
+python-coverage html

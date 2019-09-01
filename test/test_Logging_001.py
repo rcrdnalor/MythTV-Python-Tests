@@ -47,6 +47,11 @@ class test_Logging_Basic_001(unittest.TestCase):
         # check the default file:
         self.assertTrue('stdout' in repr(m._LOGFILE))
 
+        # test '__repr__' and '__str__'
+        print()
+        print(repr(m))
+        print(str(m))
+
 
 
 class test_Logging_Basic_002(unittest.TestCase):

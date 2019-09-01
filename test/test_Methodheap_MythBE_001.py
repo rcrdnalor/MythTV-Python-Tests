@@ -239,6 +239,11 @@ class test_methodheap_mythbe_015(unittest.TestCase):
         free_space_02 = next(BE.getFreeSpace(all=True))
         self.assertTrue(isinstance(free_space_02, FreeSpace))
 
+        # test '__repr__' and '__str__'
+        print()
+        print(repr(free_space_02))
+        print(str(free_space_02))
+
 
 class test_Methodheap_MythBE_016(unittest.TestCase):
     """Test method 'getFreeSpaceSummary' from MythTV.MythBE()."""

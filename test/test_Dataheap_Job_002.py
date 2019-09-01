@@ -72,6 +72,11 @@ class test_Dataheap_Job_002(unittest.TestCase):
 
         self.assertEqual(myjob.status, JOBSTATUS.FINISHED)
 
+        # test '__repr__' and '__str__'
+        print()
+        print(repr(myjob))
+        print(str(myjob))
+
 
     def test_Dataheap_Job_002_02(self):
         """Test exception of classmethod Job.fromProgram() from 'dataheap'.

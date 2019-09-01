@@ -48,7 +48,10 @@ class test_Dataheap_Video_001(unittest.TestCase):
         hex_set = {'0','1','2','3','4','5','6','7','8','9','a','b','c','d','e','f'}
         self.assertTrue(set(vid_hash.lower()).issubset(hex_set))
 
-
+        # test '__repr__' and '__str__'
+        print()
+        print(repr(vid))
+        print(str(vid))
 
 if __name__ == '__main__':
     unittest.main()
