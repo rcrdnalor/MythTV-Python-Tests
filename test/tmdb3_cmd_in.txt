@@ -1,0 +1,98 @@
+## Run this test with the follwing setup:
+##  Change to the directory showing the python bindings
+##    $ cd mythtv/mythtv/bindings/python
+##  export the PYTHONPATH like:
+##    $ export PYTHONPATH=`pwd`
+##  change to tmdb3 folder
+##    $ cd tmdb3
+##  run 
+##  $ python -m doctest -v ../test/tmdb3_cmd_in.txt
+
+
+  >>> from tmdb3 import set_key
+  >>> set_key('1acd79ff610c77f3040073d004f7f5b0')
+  
+  >>> from tmdb3 import set_cache
+  >>> set_cache(filename='tmdb3.cache')
+  
+  >>> from tmdb3 import get_locale, set_locale
+  >>> get_locale()
+  <Locale None_None>
+  >>> set_locale()
+  >>> get_locale()
+  <Locale en_US>
+  >>> type(get_locale())
+  <class 'tmdb3.locales.Locale'>
+  >>> print(get_locale())
+  en_US
+  
+  
+  >>> from tmdb3 import searchMovie
+  >>> res = searchMovie('A New Hope')
+  >>> res
+  <Search Results: A New Hope>
+  >>> len(res)
+  5
+  >>> res[0]
+  <Movie 'Star Wars' (1977)>
+  >>> res[1]
+  <Movie 'New Hope' (2012)>
+  
+   
+  >>> from tmdb3 import searchPerson
+  >>> res = searchPerson('Hanks')
+  >>> res
+  <Search Results: Hanks>
+  >>> res[0]
+  <Person 'Tom Hanks'>
+
+  >>> from tmdb3 import searchStudio
+  >>> res = searchStudio('Sony Pictures')
+  >>> res
+  <Search Results: Sony Pictures>
+  >>> res[0]
+  <Studio 'Sony Pictures'>
+  
+  >>> from tmdb3 import searchMovieWithYear
+  >>> list(searchMovieWithYear('Star Wars (1977)'))
+  [<Movie 'Star Wars' (1977)>, <Movie 'The Making of 'Star Wars'' (1977)>]
+  
+  >>> from tmdb3 import Collection, Movie, Person, Studio
+  >>> Collection(10)
+  <Collection 'Star Wars Collection'>
+  >>> Movie(11)
+  <Movie 'Star Wars' (1977)>
+  >>> Person(2)
+  <Person 'Mark Hamill'>
+  >>> Studio(1)
+  <Studio 'Lucasfilm'>
+  
+    
+    
+# Fench accents
+#   title      = u"Le Dernier Métro"
+#   castlist   = [u"Catherine Deneuve", u"Gérard Depardieu", u"Andréa Ferréol"]
+#   inetstr    = "tmdb3.py_1716"
+#   lang       = "fr"    
+
+
+  >>> set_locale('fr', 'fr')
+  >>> get_locale()
+  <Locale fr_FR>
+  
+  >>> res = searchMovie("Le Dernier Métro")
+  >>> res
+  <Search Results: Le Dernier Métro>
+  >>> res[0]
+  <Movie 'Le Dernier Métro' (1980)>
+  >>> print(res[0].cast[3].name)
+  Andréa Ferréol
+  >>> s = res[0].studios
+  >>> s[1]
+  <Studio 'Sédif Productions'>
+  >>> t = res[0].translations
+  >>> t[2]
+  <Translation 'Pусский' (ru)>
+  
+  
+                    
