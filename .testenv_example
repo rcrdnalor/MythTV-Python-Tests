@@ -69,17 +69,20 @@ export FRONTENDNAME=
 #  export RECTITLE="Die Lady von Hong Kong"
 #  export RECBASENAME=4711_20190305125100.mkv
 #  export RECRECORDID=10627
+#  export RECRECORDEDID=4762
 #  export RECINETREF=tmdb3.py_1234
 #  export RECSTARS=5.0
+#  export RECFPS=25.0
 export RECCHANID=
 export RECSTARTTIMEUTC=
 export RECSTARTTIMEMYTH=
 export RECTITLE=
 export RECBASENAME=
 export RECRECORDID=
+export RECRECORDEDID=
 export RECINETREF=
 export RECSTARS=
-
+export RECFPS=
 
 # A series entry in the Program Guide data that gets recorded:
 #  This can be taken from the "Upcoming Recordings" page.

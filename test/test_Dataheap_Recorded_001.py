@@ -207,5 +207,38 @@ class test_Dataheap_Recorded_001(unittest.TestCase):
         reclast = Recorded((chanid, starttimemyth), db = self.mydb)
         self.assertEqual("%.1f" %reclast.stars, stars)
 
+
+    def test_Dataheap_Recorded_001_07(self):
+        """Test methods 'db.searchRecorded and Recorded.getRecordedFile()'
+           in class 'Recorded' from 'dataheap'.
+        """
+        chanid        = self.testenv['RECCHANID']
+        starttimeutc  = self.testenv['RECSTARTTIMEUTC']
+        starttimemyth = self.testenv['RECSTARTTIMEMYTH']
+        title         = self.testenv['RECTITLE']
+        basename      = self.testenv['RECBASENAME']
+        recordedid    = self.testenv['RECRECORDID']
+        inetref       = self.testenv['RECINETREF']
+        recordedid    = self.testenv['RECRECORDEDID']
+        fps           = self.testenv['RECFPS']
+
+        reciter = self.mydb.searchRecorded(recordedid = recordedid)
+        rec     = next(reciter)
+        recfile = rec.getRecordedFile()
+
+        # test '__repr__' and '__str__'
+        print()
+        print(repr(recfile))
+        print(str(recfile))
+        print(repr(recfile.values()))
+        print(str(recfile.values()))
+        print(repr(recfile.keys()))
+        print(str(recfile.keys()))
+        print(repr(recfile.fps))
+        print(str(recfile.fps))
+
+        self.assertEqual("%.1f" %recfile.fps, fps)
+
+
 if __name__ == '__main__':
     unittest.main()
