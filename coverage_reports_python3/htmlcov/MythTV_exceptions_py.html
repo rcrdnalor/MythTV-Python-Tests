@@ -270,7 +270,7 @@
 <p id="t12" class="pln"><span class="str">    Error string will be available as obj.args[0].  Additional attributes</span><span class="strut">&nbsp;</span></p>
 <p id="t13" class="pln"><span class="str">        may be available depending on the error code.</span><span class="strut">&nbsp;</span></p>
 <p id="t14" class="pln"><span class="str">    """</span><span class="strut">&nbsp;</span></p>
-<p id="t15" class="stm run hide_run">    <span class="nam">ecode</span> <span class="op">=</span> <span class="nam">None</span><span class="strut">&nbsp;</span></p>
+<p id="t15" class="stm run hide_run">    <span class="nam">ecode</span> <span class="op">=</span> <span class="key">None</span><span class="strut">&nbsp;</span></p>
 <p id="t16" class="pln"><span class="strut">&nbsp;</span></p>
 <p id="t17" class="stm run hide_run">    <span class="key">def</span> <span class="nam">__init__</span><span class="op">(</span><span class="nam">self</span><span class="op">,</span> <span class="op">*</span><span class="nam">args</span><span class="op">)</span><span class="op">:</span><span class="strut">&nbsp;</span></p>
 <p id="t18" class="stm par run hide_run"><span class="annotate short">18&#x202F;&#x219B;&#x202F;19</span><span class="annotate long">line 18 didn't jump to line 19, because the condition on line 18 was never true</span>        <span class="key">if</span> <span class="nam">args</span><span class="op">[</span><span class="num">0</span><span class="op">]</span> <span class="op">==</span> <span class="nam">self</span><span class="op">.</span><span class="nam">SYSTEM</span><span class="op">:</span><span class="strut">&nbsp;</span></p>
@@ -281,7 +281,7 @@
 <p id="t23" class="stm mis">            <span class="nam">self</span><span class="op">.</span><span class="nam">ename</span> <span class="op">=</span> <span class="str">'SOCKET'</span><span class="strut">&nbsp;</span></p>
 <p id="t24" class="stm mis">            <span class="nam">self</span><span class="op">.</span><span class="nam">ecode</span><span class="op">,</span> <span class="op">(</span><span class="nam">self</span><span class="op">.</span><span class="nam">sockcode</span><span class="op">,</span> <span class="nam">self</span><span class="op">.</span><span class="nam">sockerr</span><span class="op">)</span> <span class="op">=</span> <span class="nam">args</span><span class="strut">&nbsp;</span></p>
 <p id="t25" class="stm mis">            <span class="nam">self</span><span class="op">.</span><span class="nam">args</span> <span class="op">=</span> <span class="op">(</span><span class="str">"Socket Error: %s"</span> <span class="op">%</span><span class="nam">self</span><span class="op">.</span><span class="nam">sockerr</span><span class="op">,</span><span class="op">)</span><span class="strut">&nbsp;</span></p>
-<p id="t26" class="stm run hide_run">        <span class="key">elif</span> <span class="nam">self</span><span class="op">.</span><span class="nam">ecode</span> <span class="key">is</span> <span class="nam">None</span><span class="op">:</span><span class="strut">&nbsp;</span></p>
+<p id="t26" class="stm run hide_run">        <span class="key">elif</span> <span class="nam">self</span><span class="op">.</span><span class="nam">ecode</span> <span class="key">is</span> <span class="key">None</span><span class="op">:</span><span class="strut">&nbsp;</span></p>
 <p id="t27" class="stm run hide_run">            <span class="nam">self</span><span class="op">.</span><span class="nam">ename</span> <span class="op">=</span> <span class="str">'GENERIC'</span><span class="strut">&nbsp;</span></p>
 <p id="t28" class="stm run hide_run">            <span class="nam">self</span><span class="op">.</span><span class="nam">ecode</span> <span class="op">=</span> <span class="nam">self</span><span class="op">.</span><span class="nam">GENERIC</span><span class="strut">&nbsp;</span></p>
 <p id="t29" class="stm run hide_run">            <span class="nam">self</span><span class="op">.</span><span class="nam">args</span> <span class="op">=</span> <span class="nam">args</span><span class="strut">&nbsp;</span></p>
@@ -476,7 +476,7 @@
     <div class="content">
         <p>
             <a class="nav" href="index.html">&#xab; index</a> &nbsp; &nbsp; <a class="nav" href="https://coverage.readthedocs.io">coverage.py v4.5</a>,
-            created at 2019-09-01 12:43
+            created at 2019-12-23 17:35
         </p>
     </div>
 </div>

@@ -85,7 +85,7 @@ export RECSTARS=
 export RECFPS=
 
 # A series entry in the Program Guide data that gets recorded:
-#  This can be taken from the "Upcoming Recordings" page.
+# This can be taken from the "Upcoming Recordings" page.
 # Syntax:
 #  export UPTITLE="The Sampsons"
 #  export UPTITLEFUZZY="Sampsons"
@@ -128,6 +128,19 @@ export VIDCAST_DE=
 export VIDINETREF_DE=
 export VIDLANGUAGE_DE=
 export VIDPATH_DE=
+
+
+# A video that does not exist and has French accents or German umlauts
+# in its name, a filename and an absolute path to the "Videos" storagegroup folder
+# This file will be temporarily created
+# Syntax:
+#  export VIDFRTITLE="Le Dernier Métro"
+#  export VIDFRFILENAME="dvds/Le Dernier Métro.mkv"
+#  export VIDFRPATH="/srv/path/to/video/storagegroup"
+
+export VIDFRTITLE=
+export VIDFRFILENAME=
+export VIDFRPATH=
 
 
 # Timespans where mythtv holds recordings, for Standard-Time and Summer-Time (daylight saving time)

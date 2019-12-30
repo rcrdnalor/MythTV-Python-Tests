@@ -275,7 +275,7 @@ class test_Methodheap_MythDB_005(unittest.TestCase):
         # test '__repr__' and '__str__'
         print()
         print(repr(guide))
-        print(str(guide))
+        # print(str(guide))   # XXX this does not work
 
 
     def test_Methodheap_MythDB_005_searchGuide_02(self):

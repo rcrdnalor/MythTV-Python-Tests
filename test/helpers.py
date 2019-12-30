@@ -32,6 +32,7 @@ class add_log_flags(object):
                       , '--logfile'
                       , '/tmp/my_logfile'
                       ]
+    # --nodblog --loglevel debug --verbose all --logfile /tmp/my_logfile
 
     def __enter__(self):
         sys.argv.extend(self.additional_args)

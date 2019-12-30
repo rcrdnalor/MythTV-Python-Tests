@@ -294,9 +294,9 @@
 <p id="t92" class="pln"><span class="str">    Creates a dictionary mirrored in reverse by another dictionary.</span><span class="strut">&nbsp;</span></p>
 <p id="t93" class="pln"><span class="str">    """</span><span class="strut">&nbsp;</span></p>
 <p id="t94" class="pln"><span class="strut">&nbsp;</span></p>
-<p id="t95" class="stm run hide_run">    <span class="key">def</span> <span class="nam">__init__</span><span class="op">(</span><span class="nam">self</span><span class="op">,</span> <span class="nam">other</span><span class="op">,</span> <span class="nam">mine</span><span class="op">=</span><span class="nam">None</span><span class="op">)</span><span class="op">:</span><span class="strut">&nbsp;</span></p>
+<p id="t95" class="stm run hide_run">    <span class="key">def</span> <span class="nam">__init__</span><span class="op">(</span><span class="nam">self</span><span class="op">,</span> <span class="nam">other</span><span class="op">,</span> <span class="nam">mine</span><span class="op">=</span><span class="key">None</span><span class="op">)</span><span class="op">:</span><span class="strut">&nbsp;</span></p>
 <p id="t96" class="stm mis">        <span class="nam">self</span><span class="op">.</span><span class="nam">other</span> <span class="op">=</span> <span class="nam">other</span><span class="strut">&nbsp;</span></p>
-<p id="t97" class="stm mis">        <span class="key">if</span> <span class="nam">mine</span> <span class="key">is</span> <span class="nam">None</span><span class="op">:</span><span class="strut">&nbsp;</span></p>
+<p id="t97" class="stm mis">        <span class="key">if</span> <span class="nam">mine</span> <span class="key">is</span> <span class="key">None</span><span class="op">:</span><span class="strut">&nbsp;</span></p>
 <p id="t98" class="stm mis">            <span class="nam">mine</span> <span class="op">=</span> <span class="nam">dict</span><span class="op">(</span><span class="nam">zip</span><span class="op">(</span><span class="op">*</span><span class="nam">reversed</span><span class="op">(</span><span class="nam">zip</span><span class="op">(</span><span class="op">*</span><span class="nam">other</span><span class="op">.</span><span class="nam">items</span><span class="op">(</span><span class="op">)</span><span class="op">)</span><span class="op">)</span><span class="op">)</span><span class="op">)</span><span class="strut">&nbsp;</span></p>
 <p id="t99" class="stm mis">        <span class="nam">dict</span><span class="op">.</span><span class="nam">__init__</span><span class="op">(</span><span class="nam">self</span><span class="op">,</span> <span class="nam">mine</span><span class="op">)</span><span class="strut">&nbsp;</span></p>
 <p id="t100" class="pln"><span class="strut">&nbsp;</span></p>
@@ -364,7 +364,7 @@
     <div class="content">
         <p>
             <a class="nav" href="index.html">&#xab; index</a> &nbsp; &nbsp; <a class="nav" href="https://coverage.readthedocs.io">coverage.py v4.5</a>,
-            created at 2019-08-24 15:46
+            created at 2019-12-23 17:14
         </p>
     </div>
 </div>

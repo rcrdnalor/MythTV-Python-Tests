@@ -292,4 +292,17 @@ or
 $ ./delete_pycs.sh
 ```
 
-Run the tests as described in previous section.
+Run the tests as described in previous section, but with python3:
+
+Run a combined test with python3-coverage:
+```
+$ export PYTHONPATH=`pwd`
+$ ./empy_pytmdb3_cache.sh
+$ ./delete_pycs.sh
+$ python3-coverage erase
+$ python3-coverage run --parallel-mode --concurrency=multiprocessing run_all_tests_combined.py
+$ python3-coverage combine
+$ python3-coverage report
+$ python3-coverage html
+```
+

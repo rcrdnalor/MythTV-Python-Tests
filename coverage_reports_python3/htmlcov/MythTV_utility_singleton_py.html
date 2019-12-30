@@ -133,9 +133,9 @@
 <p id="t11" class="pln"><span class="str">    """</span><span class="strut">&nbsp;</span></p>
 <p id="t12" class="stm run hide_run">    <span class="key">def</span> <span class="nam">__new__</span><span class="op">(</span><span class="nam">mcs</span><span class="op">,</span> <span class="nam">name</span><span class="op">,</span> <span class="nam">bases</span><span class="op">,</span> <span class="nam">kwargs</span><span class="op">)</span><span class="op">:</span><span class="strut">&nbsp;</span></p>
 <p id="t13" class="stm mis">        <span class="key">if</span> <span class="str">'__slots__'</span> <span class="key">in</span> <span class="nam">kwargs</span><span class="op">:</span><span class="strut">&nbsp;</span></p>
-<p id="t14" class="stm mis">            <span class="nam">kwargs</span><span class="op">[</span><span class="str">'__slots__'</span><span class="op">]</span><span class="op">[</span><span class="str">'_{0}__instance'</span><span class="op">.</span><span class="nam">format</span><span class="op">(</span><span class="nam">name</span><span class="op">)</span><span class="op">]</span> <span class="op">=</span> <span class="nam">None</span><span class="strut">&nbsp;</span></p>
+<p id="t14" class="stm mis">            <span class="nam">kwargs</span><span class="op">[</span><span class="str">'__slots__'</span><span class="op">]</span><span class="op">[</span><span class="str">'_{0}__instance'</span><span class="op">.</span><span class="nam">format</span><span class="op">(</span><span class="nam">name</span><span class="op">)</span><span class="op">]</span> <span class="op">=</span> <span class="key">None</span><span class="strut">&nbsp;</span></p>
 <p id="t15" class="pln">        <span class="key">else</span><span class="op">:</span><span class="strut">&nbsp;</span></p>
-<p id="t16" class="stm mis">            <span class="nam">kwargs</span><span class="op">[</span><span class="str">'_{0}__instance'</span><span class="op">.</span><span class="nam">format</span><span class="op">(</span><span class="nam">name</span><span class="op">)</span><span class="op">]</span> <span class="op">=</span> <span class="nam">None</span><span class="strut">&nbsp;</span></p>
+<p id="t16" class="stm mis">            <span class="nam">kwargs</span><span class="op">[</span><span class="str">'_{0}__instance'</span><span class="op">.</span><span class="nam">format</span><span class="op">(</span><span class="nam">name</span><span class="op">)</span><span class="op">]</span> <span class="op">=</span> <span class="key">None</span><span class="strut">&nbsp;</span></p>
 <p id="t17" class="stm mis">        <span class="key">return</span> <span class="nam">type</span><span class="op">.</span><span class="nam">__new__</span><span class="op">(</span><span class="nam">mcs</span><span class="op">,</span> <span class="nam">name</span><span class="op">,</span> <span class="nam">bases</span><span class="op">,</span> <span class="nam">kwargs</span><span class="op">)</span><span class="strut">&nbsp;</span></p>
 <p id="t18" class="pln"><span class="strut">&nbsp;</span></p>
 <p id="t19" class="stm run hide_run">    <span class="key">def</span> <span class="nam">__call__</span><span class="op">(</span><span class="nam">cls</span><span class="op">,</span> <span class="op">*</span><span class="nam">args</span><span class="op">,</span> <span class="op">**</span><span class="nam">kwargs</span><span class="op">)</span><span class="op">:</span><span class="strut">&nbsp;</span></p>
@@ -204,7 +204,7 @@
     <div class="content">
         <p>
             <a class="nav" href="index.html">&#xab; index</a> &nbsp; &nbsp; <a class="nav" href="https://coverage.readthedocs.io">coverage.py v4.5</a>,
-            created at 2019-08-24 15:46
+            created at 2019-12-23 17:14
         </p>
     </div>
 </div>

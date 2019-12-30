@@ -4,8 +4,10 @@
 branch = True
 source = MythTV
 
-omit = 
+omit =
     test/*
     MythTV/ttvdb/*
     MythTV/wikiscripts/*
     MythTV/services_api/*
+    MythTV/static_mine.py
+    MythTV/static_org.py

@@ -137,7 +137,7 @@
 <p id="t7" class="stm mis"><span class="nam">__version__</span> <span class="op">=</span> <span class="nam">oursql</span><span class="op">.</span><span class="nam">__version__</span><span class="op">.</span><span class="nam">split</span><span class="op">(</span><span class="str">'.'</span><span class="op">)</span><span class="strut">&nbsp;</span></p>
 <p id="t8" class="pln"><span class="strut">&nbsp;</span></p>
 <p id="t9" class="stm mis"><span class="key">if</span> <span class="nam">__version__</span> <span class="op">&lt;</span> <span class="op">(</span><span class="str">'0'</span><span class="op">,</span><span class="str">'9'</span><span class="op">,</span><span class="str">'3'</span><span class="op">)</span><span class="op">:</span><span class="strut">&nbsp;</span></p>
-<p id="t10" class="stm mis">    <span class="nam">_allow_oursql</span> <span class="op">=</span> <span class="nam">os</span><span class="op">.</span><span class="nam">environ</span><span class="op">.</span><span class="nam">get</span><span class="op">(</span><span class="str">'ENABLE_OURSQL'</span><span class="op">,</span> <span class="nam">False</span><span class="op">)</span><span class="strut">&nbsp;</span></p>
+<p id="t10" class="stm mis">    <span class="nam">_allow_oursql</span> <span class="op">=</span> <span class="nam">os</span><span class="op">.</span><span class="nam">environ</span><span class="op">.</span><span class="nam">get</span><span class="op">(</span><span class="str">'ENABLE_OURSQL'</span><span class="op">,</span> <span class="key">False</span><span class="op">)</span><span class="strut">&nbsp;</span></p>
 <p id="t11" class="stm mis">    <span class="key">if</span> <span class="nam">_allow_oursql</span> <span class="key">not</span> <span class="key">in</span> <span class="op">[</span><span class="str">'true'</span><span class="op">,</span> <span class="str">'True'</span><span class="op">,</span> <span class="str">'TRUE'</span><span class="op">,</span> <span class="str">'yes'</span><span class="op">,</span> <span class="str">'YES'</span><span class="op">,</span> <span class="str">'1'</span><span class="op">]</span><span class="op">:</span><span class="strut">&nbsp;</span></p>
 <p id="t12" class="stm mis">        <span class="key">raise</span> <span class="nam">ImportError</span><span class="op">(</span><span class="str">'Refusing to import oursql'</span><span class="op">)</span><span class="strut">&nbsp;</span></p>
 <p id="t13" class="pln"><span class="strut">&nbsp;</span></p>
@@ -151,17 +151,17 @@
 <p id="t21" class="pln">                                <span class="nam">dbconn</span><span class="op">.</span><span class="nam">password</span><span class="op">,</span><span class="strut">&nbsp;</span></p>
 <p id="t22" class="pln">                        <span class="nam">db</span><span class="op">=</span>     <span class="nam">dbconn</span><span class="op">.</span><span class="nam">database</span><span class="op">,</span><span class="strut">&nbsp;</span></p>
 <p id="t23" class="pln">                        <span class="nam">port</span><span class="op">=</span>   <span class="nam">dbconn</span><span class="op">.</span><span class="nam">port</span><span class="op">,</span><span class="strut">&nbsp;</span></p>
-<p id="t24" class="pln">                        <span class="nam">use_unicode</span><span class="op">=</span><span class="nam">True</span><span class="op">,</span><span class="strut">&nbsp;</span></p>
+<p id="t24" class="pln">                        <span class="nam">use_unicode</span><span class="op">=</span><span class="key">True</span><span class="op">,</span><span class="strut">&nbsp;</span></p>
 <p id="t25" class="pln">                        <span class="nam">charset</span><span class="op">=</span><span class="str">'utf8'</span><span class="op">,</span><span class="strut">&nbsp;</span></p>
-<p id="t26" class="pln">                        <span class="nam">autoping</span><span class="op">=</span><span class="nam">True</span><span class="op">,</span><span class="strut">&nbsp;</span></p>
-<p id="t27" class="pln">                        <span class="nam">raise_on_warnings</span><span class="op">=</span><span class="nam">False</span><span class="op">)</span><span class="strut">&nbsp;</span></p>
+<p id="t26" class="pln">                        <span class="nam">autoping</span><span class="op">=</span><span class="key">True</span><span class="op">,</span><span class="strut">&nbsp;</span></p>
+<p id="t27" class="pln">                        <span class="nam">raise_on_warnings</span><span class="op">=</span><span class="key">False</span><span class="op">)</span><span class="strut">&nbsp;</span></p>
 <p id="t28" class="stm mis">    <span class="key">return</span> <span class="nam">db</span><span class="strut">&nbsp;</span></p>
 <p id="t29" class="pln"><span class="strut">&nbsp;</span></p>
 <p id="t30" class="stm mis"><span class="key">class</span> <span class="nam">LoggedCursor</span><span class="op">(</span> <span class="nam">oursql</span><span class="op">.</span><span class="nam">Cursor</span> <span class="op">)</span><span class="op">:</span><span class="strut">&nbsp;</span></p>
 <p id="t31" class="pln">    <span class="str">"""</span><span class="strut">&nbsp;</span></p>
 <p id="t32" class="pln"><span class="str">    Custom cursor, offering logging and error handling</span><span class="strut">&nbsp;</span></p>
 <p id="t33" class="pln"><span class="str">    """</span><span class="strut">&nbsp;</span></p>
-<p id="t34" class="stm mis">    <span class="nam">log</span> <span class="op">=</span> <span class="nam">None</span><span class="strut">&nbsp;</span></p>
+<p id="t34" class="stm mis">    <span class="nam">log</span> <span class="op">=</span> <span class="key">None</span><span class="strut">&nbsp;</span></p>
 <p id="t35" class="pln"><span class="strut">&nbsp;</span></p>
 <p id="t36" class="stm mis">    <span class="key">def</span> <span class="nam">log_query</span><span class="op">(</span><span class="nam">self</span><span class="op">,</span> <span class="nam">query</span><span class="op">,</span> <span class="nam">args</span><span class="op">)</span><span class="op">:</span><span class="strut">&nbsp;</span></p>
 <p id="t37" class="stm mis">        <span class="nam">self</span><span class="op">.</span><span class="nam">log</span><span class="op">(</span><span class="nam">self</span><span class="op">.</span><span class="nam">log</span><span class="op">.</span><span class="nam">DATABASE</span><span class="op">,</span> <span class="nam">MythLog</span><span class="op">.</span><span class="nam">DEBUG</span><span class="op">,</span><span class="strut">&nbsp;</span></p>
@@ -169,7 +169,7 @@
 <p id="t39" class="pln"><span class="strut">&nbsp;</span></p>
 <p id="t40" class="stm mis">    <span class="key">def</span> <span class="nam">_sanitize</span><span class="op">(</span><span class="nam">self</span><span class="op">,</span> <span class="nam">query</span><span class="op">)</span><span class="op">:</span> <span class="key">return</span> <span class="nam">query</span><span class="op">.</span><span class="nam">replace</span><span class="op">(</span><span class="str">'%s'</span><span class="op">,</span> <span class="str">'?'</span><span class="op">)</span><span class="strut">&nbsp;</span></p>
 <p id="t41" class="pln"><span class="strut">&nbsp;</span></p>
-<p id="t42" class="stm mis">    <span class="key">def</span> <span class="nam">execute</span><span class="op">(</span><span class="nam">self</span><span class="op">,</span> <span class="nam">query</span><span class="op">,</span> <span class="nam">args</span><span class="op">=</span><span class="nam">None</span><span class="op">)</span><span class="op">:</span><span class="strut">&nbsp;</span></p>
+<p id="t42" class="stm mis">    <span class="key">def</span> <span class="nam">execute</span><span class="op">(</span><span class="nam">self</span><span class="op">,</span> <span class="nam">query</span><span class="op">,</span> <span class="nam">args</span><span class="op">=</span><span class="key">None</span><span class="op">)</span><span class="op">:</span><span class="strut">&nbsp;</span></p>
 <p id="t43" class="pln">        <span class="str">"""</span><span class="strut">&nbsp;</span></p>
 <p id="t44" class="pln"><span class="str">        Execute a query.</span><span class="strut">&nbsp;</span></p>
 <p id="t45" class="pln"><span class="strut">&nbsp;</span></p>
@@ -220,7 +220,7 @@
     <div class="content">
         <p>
             <a class="nav" href="index.html">&#xab; index</a> &nbsp; &nbsp; <a class="nav" href="https://coverage.readthedocs.io">coverage.py v4.5</a>,
-            created at 2019-08-24 15:46
+            created at 2019-12-23 17:14
         </p>
     </div>
 </div>
