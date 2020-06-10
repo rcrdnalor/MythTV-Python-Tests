@@ -62,7 +62,8 @@ class test_Methodheap_MythXML_002(unittest.TestCase):
         with add_log_flags():
             m_instance  = MythXML()
             hosts = m_instance.getHosts()
-            self.assertTrue(socket.gethostname() in hosts)
+            bename = self.testenv['BACKENDNAME']
+            self.assertTrue(bename in hosts)
 
 
     def test_Methodheap_MythXML_002_02(self):

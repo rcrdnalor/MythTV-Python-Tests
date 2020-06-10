@@ -8,10 +8,11 @@
 #     The steps to follow:
 #     Step1: Setup on your local PC, which has mythfrontend installed, a system event like:
 #       "Key_01 /usr/local/bin/mythsystemeventtest.sh %SENDER%"
+#       MariaDB [mythconverg]> insert into settings (value, data, hostname) values ("EventCmdKey01", "/usr/local/bin/mythsystemeventtest.sh %SENDER%", "<hostname>");
 #       Verify with mysql:
 #         $ mysql -h <backendIP> -u mythtv -p<password> mythconverg
 #           MariaDB [mythconverg]> select * from settings where value = 'EventCmdKey01';
-#            | EventCmdKey01 | /usr/local/bin/mythsystemeventtest.sh %SENDER% | <master_backend_ip>   |
+#            | EventCmdKey01 | /usr/local/bin/mythsystemeventtest.sh %SENDER% | <hostname>   |
 #     Step2: Setup a the script on your local PC that runs on a system event, make it executeable:
 #       Name: /usr/local/bin/mythsystemeventtest.sh
 #         #!/bin/bash
@@ -47,12 +48,14 @@
 # export 'KEY'='value'
 
 
-# The ip adress and name of a dedicated frontend:
+# The ip adress and name of a dedicated frontend and backend:
 # Syntax:
 #  export FRONTENDIP=192.168.47.11
 #  export FRONTENDNAME=galileogalilei
+#  export BACKENDNAME=kopernikus
 export FRONTENDIP=
 export FRONTENDNAME=
+export BACKENDNAME=
 
 
 # A recording that can be played on the dedicated frontend:

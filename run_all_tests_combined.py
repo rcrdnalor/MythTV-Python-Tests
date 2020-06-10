@@ -16,8 +16,10 @@ test_modules =  [
                 , "test_Dataheap_Video_004"
                 , "test_Dataheap_Video_005"
                 , "test_Dataheap_VideoGrabber_001"
+                , "test_datetime_000"
                 , "test_datetime_001"
                 , "test_datetime_002"
+                , "test_datetime_003"
                 , "test_DBCache_001"
                 , "test_DictData_001"
                 , "test_Logging_001"
@@ -38,6 +40,7 @@ test_modules =  [
                 , "test_Mythproto_001"
                 , "test_System_001"
                 , "test_repr_001"
+                , "test_singleton_001"
                 ]
 
 

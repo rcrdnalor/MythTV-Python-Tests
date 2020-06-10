@@ -306,3 +306,104 @@ $ python3-coverage report
 $ python3-coverage html
 ```
 
+### Install python 3.8 and create virtual environment
+
+See
+```
+https://askubuntu.com/questions/1197683/how-do-i-install-python-3-8-in-lubuntu-18-04
+```
+```
+$ sudo apt-get install python3.8 python3.8-dev python3.8-venv
+```
+
+Create virtual environment:
+```
+$ mkdir dev3.8
+$ python3.8 -m venv dev3.8/
+```
+
+Activate virtual environment, upgrade pip:
+```
+$ source ./dev3.8/bin/activate
+(dev3.8) $ python --version
+Python 3.8.3
+(dev3.8) $ python3 --version
+Python 3.8.3
+
+(dev3.8) $ which pip3
+... /dev3.8/bin/pip3
+
+Upgrade pip:
+(dev3.8) $ pip3 install --upgrade pip
+```
+
+
+Ubuntu 20.04:
+Installed python modules:
+
+* lxml 4.5.0
+* MySQLdb 1.4.4
+* requests 2.22.0
+* requests_cache 0.4.13
+* future 0.18.2
+
+
+Install these modules in the virtual environment:
+```
+(dev3.8) $ pip3 install lxml==4.5.0
+(dev3.8) $ pip3 install mysqlclient==1.4.4
+(dev3.8) $ pip3 install requests==2.22.0
+(dev3.8) $ pip3 install requests-cache==0.4.13
+(dev3.8) $ pip3 install future==0.18.2
+```
+
+Test it:
+```
+(dev3.8) $ python3
+Python 3.8.3 (default, May 14 2020, 20:11:43) 
+[GCC 7.5.0] on linux
+Type "help", "copyright", "credits" or "license" for more information.
+
+>>> import lxml
+>>> lxml.__version__
+'4.5.0'
+
+>>> import MySQLdb
+>>> MySQLdb.__version__
+'1.4.4'
+
+>>> import requests
+>>> requests.__version__
+'2.22.0'
+
+>>> import requests_cache
+>>> requests_cache.__version__
+'0.4.13'
+
+>>> import future
+>>> future.__version__
+'0.18.2'
+>>> 
+```
+
+Revise installed modules
+```
+(dev3.8) $ ls -la ./dev3.8/lib/python3.8/site-packages/
+```
+
+Additional notes:
+testing needs python package 'coverage' : coverage 4.5.2  (as of Ubuntu 20.04)
+```
+(dev3.8) $ pip3 install coverage==4.5.2
+```
+
+Create a 'MYTHCONFDIR' from the MythTV version under test:
+```
+$ mkdir mythconfdir3.8
+```
+Copy the config.xml of the master backend to this folder
+Export the 'MYTHCONFDIR':
+```
+(dev3.8) $ export MYTHCONFDIR=`pwd`/mythconfdir3.8
+```
+

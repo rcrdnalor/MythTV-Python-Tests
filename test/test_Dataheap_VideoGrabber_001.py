@@ -57,6 +57,8 @@ def setUpModule():
     # and copy the scripts from
     # mythtv/programs/scripts/metadata/Movie/tmdb3.py
     # mythtv/programs/scripts/metadata/Television/ttvdb.py
+    # set the PYTHONPATH
+    # export PYTHONPATH=`pwd`
 
     cwd = os.getcwd()
     rewrt_file = os.path.join(cwd, "MythTV", "static.py")

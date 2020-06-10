@@ -238,10 +238,10 @@ class test_Mythproto_003(unittest.TestCase):
                 time.sleep(1)
                 # wait until the livetv thread terminates after timeout
                 livetv.join(100.0)
-                self.assertFalse(livetv.isAlive())
+                self.assertFalse(livetv.is_alive())
                 # wait until the ftopen thread terminates after timeout
                 ftothread.join(500.0)
-                self.assertFalse(ftothread.isAlive())
+                self.assertFalse(ftothread.is_alive())
 
                 # check results:
                 # get filesize from '/tmp/testfile'

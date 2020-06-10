@@ -22,7 +22,7 @@ class test_Logging_OptParse_002(unittest.TestCase):
         """Test if 'OptParse' works with MythLog."""
 
         # set default values acc. source code
-        m_dblog    = True
+        m_dblog    = False
         m_loglevel = LOGLEVEL.INFO
         m_verbose  = LOGMASK.GENERAL
         m_logfile  = stdout
@@ -33,7 +33,7 @@ class test_Logging_OptParse_002(unittest.TestCase):
             #print ("m._LEVEL = %d" %m._LEVEL)
             #print ("m._MASK  = %d" %m._MASK)
             #print ("m._DBLOG = %s" %m._DBLOG)
-            #print sys.argv
+            #print (sys.argv)
             parser = OptionParser(prog = "simple_test")
 
             # silence warnings in unittest about missing '-v' option:
@@ -45,7 +45,7 @@ class test_Logging_OptParse_002(unittest.TestCase):
             opts, args = parser.parse_args()
 
             # check the options provided by 'additional_args':
-            m_dblog    = opts.dblog    # the options is named '--nodblog', but stored in 'dblog'
+            m_dblog    = opts.nodblog    # the option is named '--nodblog', stored in 'nodblog'
             m_loglevel = m._LEVEL
             m_verbose  = m._MASK
             m_logfile  = m._LOGFILE
