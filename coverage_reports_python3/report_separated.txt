@@ -1,10 +1,5 @@
-$ python --version
-Python 3.6.9
-$ echo $PYTHONPATH
-/home/mythtv/mythtv/mythtv/bindings/python
-$ ./empy_pytmdb3_cache.sh
-$ ./delete_pycs.sh
-$ ./run_all_tests_separated.sh 
+
+(dev3.8) local-admin@newton:~/MythTV/MythTV_python_master$ ./run_all_tests_separated.sh 
 Using python3-coverage.
 
 Using the following tests:
@@ -19,8 +14,10 @@ test.test_Dataheap_Video_003
 test.test_Dataheap_Video_004
 test.test_Dataheap_Video_005
 test.test_Dataheap_VideoGrabber_001
+test.test_datetime_000
 test.test_datetime_001
 test.test_datetime_002
+test.test_datetime_003
 test.test_DBCache_001
 test.test_DictData_001
 test.test_Logging_001
@@ -41,28 +38,30 @@ test.test_MSearch_002
 test.test_Mythproto_001
 test.test_System_001
 test.test_repr_001
+test.test_singleton_001
 test_Dataheap_Job_001_01 (test.test_Dataheap_Job_001.test_Dataheap_Job_001)
-Test classmethod Job.fromRecorded() from 'dataheap'. ... /home/admin/MythTV/mythtv//MythTV/_conn_mysqldb.py:72: Warning: (1364, "Field 'args' doesn't have a default value")
+Test classmethod Job.fromRecorded() from 'dataheap'. ... <Recorded 'Lotto 6 aus 45 mit Joker','2020-02-02 19:13:00+01:00' at 0x7fe6e4563468>
+/home/local-admin/MythTV/MythTV_python_master/MythTV/_conn_mysqldb.py:77: Warning: (1364, "Field 'args' doesn't have a default value")
   return super(LoggedCursor, self).execute(query, args)
 ok
 
 ----------------------------------------------------------------------
-Ran 1 test in 20.068s
+Ran 1 test in 340.478s
 
 OK
 sys:1: ResourceWarning: unclosed file <_io.BufferedWriter name='/tmp/my_logfile'>
 test_Dataheap_Job_002_01 (test.test_Dataheap_Job_002.test_Dataheap_Job_002)
-Test classmethod Job.fromProgram() from 'dataheap'. ... /home/admin/MythTV/mythtv//MythTV/_conn_mysqldb.py:72: Warning: (1364, "Field 'args' doesn't have a default value")
+Test classmethod Job.fromProgram() from 'dataheap'. ... /home/local-admin/MythTV/MythTV_python_master/MythTV/_conn_mysqldb.py:77: Warning: (1364, "Field 'args' doesn't have a default value")
   return super(LoggedCursor, self).execute(query, args)
 
-<Job '2060' at 0x7f99dd02ac50>
-<Job '2060' at 0x7f99dd02ac50>
+<Job '27' at 0x7f83df80d2b0>
+<Job '27' at 0x7f83df80d2b0>
 ok
 test_Dataheap_Job_002_02 (test.test_Dataheap_Job_002.test_Dataheap_Job_002)
 Test exception of classmethod Job.fromProgram() from 'dataheap'. ... ok
 
 ----------------------------------------------------------------------
-Ran 2 tests in 60.159s
+Ran 2 tests in 300.486s
 
 OK
 sys:1: ResourceWarning: unclosed file <_io.BufferedWriter name='/tmp/my_logfile'>
@@ -80,10 +79,10 @@ test_Dataheap_Recorded_001_06 (test.test_Dataheap_Recorded_001.test_Dataheap_Rec
 Test method 'Recorded.importMetadata()' and 'Recorded.update()' ... ok
 test_Dataheap_Recorded_001_07 (test.test_Dataheap_Recorded_001.test_Dataheap_Recorded_001)
 Test methods 'db.searchRecorded and Recorded.getRecordedFile()' ... 
-<RecordedFile '3030_20190305125100.mkv','4762' at 0x7f965688ce08>
-<RecordedFile '3030_20190305125100.mkv','4762' at 0x7f965688ce08>
-['3030_20190305125100.mkv', 2793354377, 992, 720, 25.0, 1.377778, 0, 0, 'AAC', 'H264', '', 'server', 'Default', 4762, 4762, 'MATROSKA', 0, 0, 0, 0, 0]
-['3030_20190305125100.mkv', 2793354377, 992, 720, 25.0, 1.377778, 0, 0, 'AAC', 'H264', '', 'server', 'Default', 4762, 4762, 'MATROSKA', 0, 0, 0, 0, 0]
+<RecordedFile '10111_20200202140200.ts','6' at 0x7f60a5808d00>
+<RecordedFile '10111_20200202140200.ts','6' at 0x7f60a5808d00>
+['10111_20200202140200.ts', 7174175692, 1920, 1088, 25.0, 1.777778, 0, 0, 'MP2', 'H264', '', 'kopernikus', 'Default', 6, 6, 'MPEG2-TS', 0, 0, 0, 0, 0]
+['10111_20200202140200.ts', 7174175692, 1920, 1088, 25.0, 1.777778, 0, 0, 'MP2', 'H264', '', 'kopernikus', 'Default', 6, 6, 'MPEG2-TS', 0, 0, 0, 0, 0]
 ['basename', 'filesize', 'width', 'height', 'fps', 'aspect', 'audio_sample_rate', 'audio_channels', 'audio_codec', 'video_codec', 'comment', 'hostname', 'storagegroup', 'id', 'recordedid', 'container', 'total_bitrate', 'video_avg_bitrate', 'video_max_bitrate', 'audio_avg_bitrate', 'audio_max_bitrate']
 ['basename', 'filesize', 'width', 'height', 'fps', 'aspect', 'audio_sample_rate', 'audio_channels', 'audio_codec', 'video_codec', 'comment', 'hostname', 'storagegroup', 'id', 'recordedid', 'container', 'total_bitrate', 'video_avg_bitrate', 'video_max_bitrate', 'audio_avg_bitrate', 'audio_max_bitrate']
 25.0
@@ -91,18 +90,18 @@ Test methods 'db.searchRecorded and Recorded.getRecordedFile()' ...
 ok
 
 ----------------------------------------------------------------------
-Ran 7 tests in 0.191s
+Ran 7 tests in 0.226s
 
 OK
 test_Dataheap_Recorded_002_01 (test.test_Dataheap_Recorded_002.test_Dataheap_Recorded_002)
 Test creation of a Recoreded and ... ok
 test_Dataheap_Recorded_002_02 (test.test_Dataheap_Recorded_002.test_Dataheap_Recorded_002)
-Test creation of a Recoreded and ... Die letzte Metro
+Test creation of a Recoreded and ... Steven Seagal - Mercenary
 [[('name', 'Catherine Deneuve'), ('role', 'actor')], [('name', 'Gérard Depardieu'), ('role', 'actor')], [('name', 'Andréa Ferréol'), ('role', 'actor')], [('name', 'François Truffaut'), ('role', 'director')]]
 ok
 
 ----------------------------------------------------------------------
-Ran 2 tests in 0.093s
+Ran 2 tests in 0.102s
 
 OK
 test_Dataheap_Recorded_003_01 (test.test_Dataheap_Recorded_003.test_Dataheap_Recorded_003)
@@ -110,17 +109,17 @@ Test creation of a Recoreded and ... [[('name', 'Catherine Deneuve'), ('role', '
 ok
 
 ----------------------------------------------------------------------
-Ran 1 test in 0.070s
+Ran 1 test in 0.099s
 
 OK
 test_Dataheap_Video_001_getHash_01 (test.test_Dataheap_Video_001.test_Dataheap_Video_001)
 Test 'getHash' method from MythTV.Video ... 
-<Video 'Let's Make Love' at 0x7f2d6a795728>
-<Video '140' at 0x7f2d6a795728>
+<Video 'Machen wir's in Liebe' at 0x7f8db6df6200>
+<Video '2' at 0x7f8db6df6200>
 ok
 
 ----------------------------------------------------------------------
-Ran 1 test in 0.044s
+Ran 1 test in 0.096s
 
 OK
 test_Dataheap_Video_002_parseFilename_01 (test.test_Dataheap_Video_002.test_Dataheap_Video_002)
@@ -129,7 +128,7 @@ test_Dataheap_Video_002_parseFilename_02 (test.test_Dataheap_Video_002.test_Data
 Test 'parseFilename' method from MythTV.Video ... ok
 
 ----------------------------------------------------------------------
-Ran 2 tests in 0.032s
+Ran 2 tests in 0.045s
 
 OK
 test_Dataheap_Video_003_exportMetadata_01 (test.test_Dataheap_Video_003.test_Dataheap_Video_003)
@@ -140,25 +139,25 @@ test_Dataheap_Video_003_importMetadata_01 (test.test_Dataheap_Video_003.test_Dat
 Test 'exportMetadata' method from MythTV.Video. ... ok
 
 ----------------------------------------------------------------------
-Ran 3 tests in 0.100s
+Ran 3 tests in 0.174s
 
 OK
 test_Dataheap_Video_004_01 (test.test_Dataheap_Video_004.test_Dataheap_Video_004)
-Test creation of a Video and ... <Video 'Le Dernier Métro' at 0x7f7fb5b7e678>
-<Video '1510' at 0x7f7fb5b7e678>
+Test creation of a Video and ... <Video 'Le Dernier Métro' at 0x7f36e255f1a8>
+<Video '23' at 0x7f36e255f1a8>
 ok
 
 ----------------------------------------------------------------------
-Ran 1 test in 0.057s
+Ran 1 test in 0.085s
 
 OK
 test_Dataheap_Video_005_01 (test.test_Dataheap_Video_005.test_Dataheap_Video_005)
-Test creation of a Video with an existing file and host entry. ... ssh mythtv@192.168.47.11 'head -c 10M </dev/urandom > "/mnt/mydata-04/data-04/myth_videos/dvds/Le Dernier Métro.mkv"'
-ssh mythtv@192.168.47.11 'rm "/mnt/mydata-04/data-04/myth_videos/dvds/Le Dernier Métro.mkv"'
+Test creation of a Video with an existing file and host entry. ... ssh mythtv@kopernikus 'head -c 10M </dev/urandom > "/mnt/mythtv/videos/Le Dernier Métro.mkv"'
+ssh mythtv@kopernikus 'rm "/mnt/mythtv/videos/Le Dernier Métro.mkv"'
 ok
 
 ----------------------------------------------------------------------
-Ran 1 test in 0.968s
+Ran 1 test in 2.172s
 
 OK
 test_Dataheap_VideoGrabber_001_grabInetref_01 (test.test_Dataheap_VideoGrabber_001.test_Dataheap_VideoGrabber_001)
@@ -173,7 +172,58 @@ test_Dataheap_VideoGrabber_002_importMetadata_02 (test.test_Dataheap_VideoGrabbe
 Test 'VideoGrabber.grabInetref' method and 'Video.importMetadata' ... ok
 
 ----------------------------------------------------------------------
-Ran 5 tests in 4.421s
+Ran 5 tests in 2.518s
+
+OK
+local time:  Tue 2020-06-09 18:15:41 CEST
+utc time:    Tue 2020-06-09 16:15:41 UTC
+time offset: 7200
+timestamp:   1591719341.291052 <class 'float'>
+test_datetime_000_01 (test.test_datetime_000.test_datetime_000)
+Test method 'MythTV.datetime.localTZ() ... ok
+test_datetime_000_02 (test.test_datetime_000.test_datetime_000)
+test method 'MythTV.datetime.UTCTZ()' ... ok
+test_datetime_000_03 (test.test_datetime_000.test_datetime_000)
+test method 'MythTV.datetime.fromDatetime()' without tzinfo ... ok
+test_datetime_000_04 (test.test_datetime_000.test_datetime_000)
+test method 'MythTV.datetime.fromDatetime()' with tzinfo ... ok
+test_datetime_000_05 (test.test_datetime_000.test_datetime_000)
+Test method 'MythTV.datetime.now()' without tzinfo ... ok
+test_datetime_000_06 (test.test_datetime_000.test_datetime_000)
+Test method 'MythTV.datetime.now()' with tzinfo ... ok
+test_datetime_000_07 (test.test_datetime_000.test_datetime_000)
+Test method 'MythTV.datetime.utcnow()' ... ok
+test_datetime_000_08 (test.test_datetime_000.test_datetime_000)
+Test method 'MythTV.datetime.utcnow()' against output of 'timedatectl' ... ok
+test_datetime_000_09 (test.test_datetime_000.test_datetime_000)
+Test method 'MythTV.datetime.fromtimestamp()' without given time-zone ... ok
+test_datetime_000_10 (test.test_datetime_000.test_datetime_000)
+Test method 'MythTV.datetime.fromtimestamp()' with given time-zone ... ok
+test_datetime_000_11 (test.test_datetime_000.test_datetime_000)
+Test method 'MythTV.datetime.utcfromtimestamp() ... ok
+test_datetime_000_12 (test.test_datetime_000.test_datetime_000)
+Test method 'MythTV.datetime.strptime()' without timezone ... ok
+test_datetime_000_13 (test.test_datetime_000.test_datetime_000)
+Test method 'MythTV.datetime.strptime()' with given timezone ... ok
+test_datetime_000_14 (test.test_datetime_000.test_datetime_000)
+Test method 'MythTV.datetime.fromnaiveutc(cls, dt)()' ... ok
+test_datetime_000_15 (test.test_datetime_000.test_datetime_000)
+Test method 'MythTV.datetime.frommythtime(cls, mtime, tz=None) ... ok
+test_datetime_000_16 (test.test_datetime_000.test_datetime_000)
+Test method 'MythTV.datetime.mythformat ... ok
+test_datetime_000_17 (test.test_datetime_000.test_datetime_000)
+Test method 'MythTV.datetime.timestamp() ... ok
+test_datetime_000_18 (test.test_datetime_000.test_datetime_000)
+Test method 'MythTV.datetime.rfcformat() ... ok
+test_datetime_000_19 (test.test_datetime_000.test_datetime_000)
+Test method 'MythTV.datetime.utcrfcformat() ... ok
+test_datetime_000_20 (test.test_datetime_000.test_datetime_000)
+Test method 'MythTV.datetime.utcisoformat() ... ok
+test_datetime_000_21 (test.test_datetime_000.test_datetime_000)
+Test method 'MythTV.asnaiveutc() ... ok
+
+----------------------------------------------------------------------
+Ran 21 tests in 0.109s
 
 OK
 /usr/lib/python3.6/importlib/_bootstrap.py:219: ImportWarning: can't resolve package from __spec__ or __package__, falling back on __name__ and __path__
@@ -239,7 +289,14 @@ test_datetime_002_13 (test.test_datetime_002.test_datetime_002)
 Test 'RFC' to 'UTC' conversion in respect to daylight saving time of 'America/Anchorage' ... ok
 
 ----------------------------------------------------------------------
-Ran 13 tests in 0.072s
+Ran 13 tests in 0.074s
+
+OK
+test_datetime_003_01 (test.test_datetime_003.test_datetime_003)
+Test if class 'posixtzinfo' is an 'InputSingleton'. ... ok
+
+----------------------------------------------------------------------
+Ran 1 test in 0.002s
 
 OK
 test_DBCache_001_01 (test.test_DBCache_001.test_DBCache_001)
@@ -247,7 +304,7 @@ Get all settings from database. ... Python-Version: 3
 ok
 
 ----------------------------------------------------------------------
-Ran 1 test in 0.025s
+Ran 1 test in 0.030s
 
 OK
 test_dictdata_001_01 (test.test_DictData_001.test_DictData_001)
@@ -271,8 +328,8 @@ Ran 7 tests in 0.002s
 OK
 test_Logging_Basic_001_01 (test.test_Logging_001.test_Logging_Basic_001)
 Test if default options works with MythLog. ... 
-<MythLog 'simple_test','0b1' at 0x7f0d1a412940>
-<MythLog 'simple_test','0b1' at 0x7f0d1a412940>
+<MythLog 'simple_test','0b1' at 0x7f3d2ccf0198>
+<MythLog 'simple_test','0b1' at 0x7f3d2ccf0198>
 ok
 test_Logging_Basic_002_01 (test.test_Logging_001.test_Logging_Basic_002)
 Test if options can be modified from MythTV.MythLog. ... ok
@@ -322,7 +379,7 @@ test_test_Methodheap_BEEventMonitor_001_01 (test.test_Methodheap_BEEventMonitor_
 Test 'BEEventMonitor' from MythTV.BEEventMonitor() with logging. ... ok
 
 ----------------------------------------------------------------------
-Ran 1 test in 21.998s
+Ran 1 test in 22.254s
 
 OK
 test_Methodheap_Frontend_001_getLoad_01 (test.test_Methodheap_Frontend_001.test_Methodheap_Frontend_001)
@@ -343,7 +400,7 @@ test_Methodheap_Frontend_001_query_play_01 (test.test_Methodheap_Frontend_001.te
 Test 'sendQuery', 'sendPlay' and 'jump' methods from MythTV.Frontend() ... ok
 
 ----------------------------------------------------------------------
-Ran 8 tests in 45.143s
+Ran 8 tests in 40.410s
 
 OK
 test_Methodheap_MythBE_001_getPendingRecordings_01 (test.test_Methodheap_MythBE_001.test_Methodheap_MythBE_001)
@@ -406,12 +463,12 @@ test_methodheap_mythbe_015_getFreeSpace_01 (test.test_Methodheap_MythBE_001.test
 test 'getFreeSpace' method from mythtv.mythbe(). ... ok
 test_methodheap_mythbe_015_getFreeSpace_02 (test.test_Methodheap_MythBE_001.test_methodheap_mythbe_015)
 test 'getFreeSpace' method from mythtv.mythbe(). ... 
-<FreeSpace 'server:/mnt/mydata-01/data-01/livetv,server:/mnt/mydata-01/data-01/recordings,server:/mnt/mydata-01/data-01/streaming@server' at 0x7fa624edfe60>
-<FreeSpace 'server:/mnt/mydata-01/data-01/livetv,server:/mnt/mydata-01/data-01/recordings,server:/mnt/mydata-01/data-01/streaming@server' at 0x7fa624edfe60>
+<FreeSpace 'kopernikus:/mnt/mythtv/livetv,kopernikus:/mnt/mythtv/recordings@kopernikus' at 0x7efd9fca1fc0>
+<FreeSpace 'kopernikus:/mnt/mythtv/livetv,kopernikus:/mnt/mythtv/recordings@kopernikus' at 0x7efd9fca1fc0>
 ok
 
 ----------------------------------------------------------------------
-Ran 30 tests in 6.890s
+Ran 30 tests in 1.373s
 
 OK
 test_Methodheap_MythDB_001_searchRecorded_01 (test.test_Methodheap_MythDB_001.test_Methodheap_MythDB_001)
@@ -442,7 +499,7 @@ test_Methodheap_MythDB_004_searchJobs_01 (test.test_Methodheap_MythDB_001.test_M
 Test 'searchJobs' method from MythTV.MythDB(). ... ok
 test_Methodheap_MythDB_005_searchGuide_01 (test.test_Methodheap_MythDB_001.test_Methodheap_MythDB_005)
 Test 'searchGuide' method from MythTV.MythDB(). ... 
-<Guide 'Die weiße Schlange','2019-12-14 14:30:00+01:00' at 0x7f7978705b48>
+<Guide 'Topfgeldjäger','2020-06-08 08:10:00+02:00' at 0x7f46ae6618e0>
 ok
 test_Methodheap_MythDB_005_searchGuide_02 (test.test_Methodheap_MythDB_001.test_Methodheap_MythDB_005)
 Test 'searchGuide' method from MythTV.MythDB() using fuzzy title. ... ok
@@ -451,14 +508,10 @@ Test 'searchRecord' method from MythTV.MythDB() ... ok
 test_Methodheap_MythDB_006_searchRecord_02 (test.test_Methodheap_MythDB_001.test_Methodheap_MythDB_006)
 Test 'searchRecord' method from MythTV.MythDB() ... ok
 test_Methodheap_MythDB_007_getFrontends_01 (test.test_Methodheap_MythDB_001.test_Methodheap_MythDB_007)
-Test 'getFrontends' method from MythTV.MythDB(). ... /home/admin/MythTV/mythtv//test/test_Methodheap_MythDB_001.py:341: ResourceWarning: unclosed <MythTV.utility.other.deadlinesocket fd=5, family=AddressFamily.AF_INET, type=2049, proto=0, laddr=('0.0.0.0', 0)>
-  frontends = next(self.mydb.getFrontends())
-No frontend is connected to the MythTV's python bindings.
+Test 'getFrontends' method from MythTV.MythDB(). ... galileogalilei@6546
 ok
 test_Methodheap_MythDB_008_getFrontend_01 (test.test_Methodheap_MythDB_001.test_Methodheap_MythDB_008)
-Test 'getFrontend' method from MythTV.MythDB(). ... /home/admin/MythTV/mythtv//test/test_Methodheap_MythDB_001.py:369: ResourceWarning: unclosed <MythTV.utility.other.deadlinesocket fd=5, family=AddressFamily.AF_INET, type=2049, proto=0, laddr=('0.0.0.0', 0)>
-  pass
-ok
+Test 'getFrontend' method from MythTV.MythDB(). ... ok
 test_Methodheap_MythDB_009_scanVideos_01 (test.test_Methodheap_MythDB_001.test_Methodheap_MythDB_009)
 Test 'scanVideos' method from MythTV.MythDB(). ... ok
 test_Methodheap_MythDB_010_searchVideos_01 (test.test_Methodheap_MythDB_001.test_Methodheap_MythDB_010)
@@ -471,14 +524,14 @@ test_Methodheap_MythDB_102_getStorageGroup_01 (test.test_Methodheap_MythDB_001.t
 Test 'getStorageGroup' method from MythTV.MythDB() inherited from DBCache. ... ok
 
 ----------------------------------------------------------------------
-Ran 24 tests in 1.405s
+Ran 24 tests in 0.442s
 
 OK
 test_test_Methodheap_MythSystemEvent_001_01 (test.test_Methodheap_MythSystemEvent_001.test_Methodheap_MythSystemEvent_001)
 Test if 'MythSystemEvent' calls a registered script for the ... ok
 
 ----------------------------------------------------------------------
-Ran 1 test in 3.628s
+Ran 1 test in 3.887s
 
 OK
 test_Methodheap_MythXML_001_01 (test.test_Methodheap_MythXML_001.test_Methodheap_MythXML_001)
@@ -503,7 +556,7 @@ test_Methodheap_MythXML_001_09 (test.test_Methodheap_MythXML_001.test_Methodheap
 Test MythXML.getPreviewImage(). ... ok
 
 ----------------------------------------------------------------------
-Ran 10 tests in 14.862s
+Ran 10 tests in 0.846s
 
 OK
 test_Methodheap_MythXML_002_01 (test.test_Methodheap_MythXML_002.test_Methodheap_MythXML_002)
@@ -528,7 +581,7 @@ test_Methodheap_MythXML_002_09 (test.test_Methodheap_MythXML_002.test_Methodheap
 Test MythXML.getPreviewImage(). ... ok
 
 ----------------------------------------------------------------------
-Ran 10 tests in 15.024s
+Ran 10 tests in 0.985s
 
 OK
 test_MSearch_001_01 (test.test_MSearch_001.test_MSearch_001)
@@ -539,7 +592,7 @@ test_MSearch_001_03 (test.test_MSearch_001.test_MSearch_001)
 Test MSearch.searchMythFE(). ... ok
 
 ----------------------------------------------------------------------
-Ran 3 tests in 2.577s
+Ran 3 tests in 1.670s
 
 OK
 test_MSearch_002_01 (test.test_MSearch_002.test_MSearch_002)
@@ -550,15 +603,15 @@ test_MSearch_002_03 (test.test_MSearch_002.test_MSearch_002)
 Test MSearch.searchMythFE() logging. ... ok
 
 ----------------------------------------------------------------------
-Ran 3 tests in 0.980s
+Ran 3 tests in 2.176s
 
 OK
 test_Mythproto_001_findfile_01 (test.test_Mythproto_001.test_Mythproto_001)
 Test 'findfile' method from MythTV mytproto. ... ok
 test_Mythproto_002_ftopen_01 (test.test_Mythproto_001.test_Mythproto_002)
-Test 'ftopen' method from MythTV mythproto.py with 'chanid', 'starttime'. ... Exception ignored in: <bound method FileTransfer.__del__ of <open file 'myth://Temp@192.168.47.11/3002_20190622105000.mkv', mode 'w' at 0x7fbd778d49e8>>
+Test 'ftopen' method from MythTV mythproto.py with 'chanid', 'starttime'. ... Exception ignored in: <bound method FileTransfer.__del__ of <open file 'myth://Temp@kopernikus/10102_20200202181300.ts', mode 'w' at 0x7fd568639588>>
 Traceback (most recent call last):
-  File "/home/admin/MythTV/mythtv//MythTV/mythproto.py", line 402, in __del__
+  File "/home/local-admin/MythTV/MythTV_python_master/MythTV/mythproto.py", line 405, in __del__
     del self.ftsock
 AttributeError: ftsock
 ok
@@ -570,24 +623,24 @@ test_Mythproto_005_ftopen_01 (test.test_Mythproto_001.test_Mythproto_005)
 Test 'ftopen' method from MythTV mythproto.py by calling ... ok
 
 ----------------------------------------------------------------------
-Ran 5 tests in 199.512s
+Ran 5 tests in 225.628s
 
 OK
-Exception ignored in: <bound method FileTransfer.__del__ of <open file 'myth://LiveTV@192.168.47.11/3030_20191223164547.ts', mode 'r' at 0x7fbd76e5ecc0>>
+Exception ignored in: <bound method FileTransfer.__del__ of <open file 'myth://LiveTV@kopernikus/10111_20200609161804.ts', mode 'r' at 0x7fd568658fd0>>
 Traceback (most recent call last):
-  File "/home/admin/MythTV/mythtv//MythTV/mythproto.py", line 402, in __del__
+  File "/home/local-admin/MythTV/MythTV_python_master/MythTV/mythproto.py", line 405, in __del__
     del self.ftsock
 AttributeError: ftsock
-Exception ignored in: <bound method DownloadFileTransfer.__del__ of <open file 'myth://Temp@192.168.47.11//download_c75a7f33.tmp', mode 'r' at 0x7fbd76e5eef0>>
+Exception ignored in: <bound method DownloadFileTransfer.__del__ of <open file 'myth://Temp@kopernikus//download_ed5d0918.tmp', mode 'r' at 0x7fd568658f60>>
 Traceback (most recent call last):
-  File "/home/admin/MythTV/mythtv//MythTV/mythproto.py", line 621, in __del__
+  File "/home/local-admin/MythTV/MythTV_python_master/MythTV/mythproto.py", line 624, in __del__
     FileTransfer.__del__(self)
-  File "/home/admin/MythTV/mythtv//MythTV/mythproto.py", line 402, in __del__
+  File "/home/local-admin/MythTV/MythTV_python_master/MythTV/mythproto.py", line 405, in __del__
     del self.ftsock
 AttributeError: ftsock
-Exception ignored in: <bound method FileTransfer.__del__ of <open file 'myth://Default@192.168.47.11/3002_20190622105000.mkv', mode 'r' at 0x7fbd778ca6d8>>
+Exception ignored in: <bound method FileTransfer.__del__ of <open file 'myth://Default@kopernikus/10102_20200202181300.ts', mode 'r' at 0x7fd56862c4e0>>
 Traceback (most recent call last):
-  File "/home/admin/MythTV/mythtv//MythTV/mythproto.py", line 402, in __del__
+  File "/home/local-admin/MythTV/MythTV_python_master/MythTV/mythproto.py", line 405, in __del__
     del self.ftsock
 AttributeError: ftsock
 test_system_001_01 (test.test_System_001.test_System_001)
@@ -604,12 +657,12 @@ test_system_003_01 (test.test_System_001.test_System_003)
 Test if 'System.system' executes 'echo' command with unicode characters. ... ok
 
 ----------------------------------------------------------------------
-Ran 6 tests in 0.527s
+Ran 6 tests in 0.528s
 
 OK
 test_repr_001_01 (test.test_repr_001.test_repr_and_str_001) ... 
-<MythDB 'sql://mythconverg@192.168.47.11:3306/' at 0x7f559ec8fe80>
-<MythDB 'sql://mythconverg@192.168.47.11:3306/' at 0x7f559ec8fe80>
+<MythDB 'sql://mythconverg@kopernikus:3306/' at 0x7f474ab31b38>
+<MythDB 'sql://mythconverg@kopernikus:3306/' at 0x7f474ab31b38>
 
 ['recgroups']
 ['recgroups']
@@ -624,8 +677,8 @@ test_repr_001_02 (test.test_repr_001.test_repr_and_str_001) ...
 []
 []
 
-'192.168.47.11'
-192.168.47.11
+'kopernikus'
+kopernikus
 
 []
 []
@@ -634,47 +687,47 @@ test_repr_001_02 (test.test_repr_001.test_repr_and_str_001) ...
 6546
 ok
 test_repr_001_03 (test.test_repr_001.test_repr_and_str_001) ... 
-<StorageGroup 'myth://LiveTV@server/mnt/mydata-01/data-01/livetv/' at 0x7f559e7eb570
-<StorageGroup 'myth://LiveTV@server/mnt/mydata-01/data-01/livetv/' at 0x7f559e7eb570
+<StorageGroup 'myth://LiveTV@kopernikus/mnt/mythtv/livetv/' at 0x7f474ab21fc0
+<StorageGroup 'myth://LiveTV@kopernikus/mnt/mythtv/livetv/' at 0x7f474ab21fc0
 ok
 test_repr_002_01 (test.test_repr_001.test_repr_and_str_002) ... 
-<Recorded 'Die Lady von Shanghai','2019-03-05 13:51:00+01:00' at 0x7f559ed019e8>
-<Recorded 'Die Lady von Shanghai','2019-03-05 13:51:00+01:00' at 0x7f559ed019e8>
+<Recorded 'Die Frau des Zeitreisenden','2020-02-02 15:02:00+01:00' at 0x7f474ab21fc0>
+<Recorded 'Die Frau des Zeitreisenden','2020-02-02 15:02:00+01:00' at 0x7f474ab21fc0>
 
-[[('mark', 1), ('type', 14), ('data', 1377777)], [('mark', 1), ('type', 30), ('data', 992)], [('mark', 1), ('type', 31), ('data', 720)], [('mark', 1), ('type', 32), ('data', 25000)], [('mark', 0), ('type', 33), ('data', 5030160)], [('mark', 0), ('type', 34), ('data', 125754)], [('mark', 39024), ('type', 41), ('data', None)]]
-[[('mark', 1), ('type', 14), ('data', 1377777)], [('mark', 1), ('type', 30), ('data', 992)], [('mark', 1), ('type', 31), ('data', 720)], [('mark', 1), ('type', 32), ('data', 25000)], [('mark', 0), ('type', 33), ('data', 5030160)], [('mark', 0), ('type', 34), ('data', 125754)], [('mark', 39024), ('type', 41), ('data', None)]]
+[[('mark', 0), ('type', -3), ('data', None)], [('mark', 6353), ('type', 0), ('data', None)], [('mark', 54117), ('type', 0), ('data', None)], [('mark', 95806), ('type', 0), ('data', None)], [('mark', 136948), ('type', 0), ('data', None)], [('mark', 176853), ('type', 0), ('data', None)], [('mark', 43158), ('type', 1), ('data', None)], [('mark', 85375), ('type', 1), ('data', None)], [('mark', 125566), ('type', 1), ('data', None)], [('mark', 166275), ('type', 1), ('data', None)], [('mark', 192621), ('type', 1), ('data', None)], [('mark', 1), ('type', 12), ('data', None)], [('mark', 1), ('type', 30), ('data', 1920)], [('mark', 1), ('type', 31), ('data', 1088)], [('mark', 1), ('type', 32), ('data', 25000)], [('mark', 0), ('type', 33), ('data', 8314000)], [('mark', 0), ('type', 34), ('data', 207543)], [('mark', 5961), ('type', 40), ('data', None)], [('mark', 7084), ('type', 41), ('data', None)]]
+[[('mark', 0), ('type', -3), ('data', None)], [('mark', 6353), ('type', 0), ('data', None)], [('mark', 54117), ('type', 0), ('data', None)], [('mark', 95806), ('type', 0), ('data', None)], [('mark', 136948), ('type', 0), ('data', None)], [('mark', 176853), ('type', 0), ('data', None)], [('mark', 43158), ('type', 1), ('data', None)], [('mark', 85375), ('type', 1), ('data', None)], [('mark', 125566), ('type', 1), ('data', None)], [('mark', 166275), ('type', 1), ('data', None)], [('mark', 192621), ('type', 1), ('data', None)], [('mark', 1), ('type', 12), ('data', None)], [('mark', 1), ('type', 30), ('data', 1920)], [('mark', 1), ('type', 31), ('data', 1088)], [('mark', 1), ('type', 32), ('data', 25000)], [('mark', 0), ('type', 33), ('data', 8314000)], [('mark', 0), ('type', 34), ('data', 207543)], [('mark', 5961), ('type', 40), ('data', None)], [('mark', 7084), ('type', 41), ('data', None)]]
 
-[('mark', 1), ('type', 14), ('data', 1377777)]
-[('mark', 1), ('type', 14), ('data', 1377777)]
+[('mark', 0), ('type', -3), ('data', None)]
+[('mark', 0), ('type', -3), ('data', None)]
 
-1
-1
+0
+0
 
-1377777
-1377777
+None
+None
 
-<RecordedArtwork 'tmdb3.py_3766','0' at 0x7f559e81ca40>
-<RecordedArtwork 'tmdb3.py_3766','0' at 0x7f559e81ca40>
+<RecordedArtwork 'tmdb3.py_24420','0' at 0x7f474a428f10>
+<RecordedArtwork 'tmdb3.py_24420','0' at 0x7f474a428f10>
 
-<Coverart 'tmdb3.py_3766_coverart.jpg'>
+<Coverart 'tmdb3.py_24420_coverart.jpg'>
 coverart
 
-<RecordedProgram 'Die Lady von Shanghai','2019-03-05 13:55:00+01:00' at 0x7f559e81cd00>
-<RecordedProgram 'Die Lady von Shanghai','2019-03-05 13:55:00+01:00' at 0x7f559e81cd00>
+<RecordedProgram 'Die Frau des Zeitreisenden','2020-02-02 15:06:12+01:00' at 0x7f474a436200>
+<RecordedProgram 'Die Frau des Zeitreisenden','2020-02-02 15:06:12+01:00' at 0x7f474a436200>
 
-<OldRecorded 'Die Lady von Shanghai','2019-03-05 13:55:00+01:00' at 0x7f559e5a7308>
-<OldRecorded 'Die Lady von Shanghai','2019-03-05 13:55:00+01:00' at 0x7f559e5a7308>
+<OldRecorded 'Die Frau des Zeitreisenden','2020-02-02 15:06:12+01:00' at 0x7f474a4457d8>
+<OldRecorded 'Die Frau des Zeitreisenden','2020-02-02 15:06:12+01:00' at 0x7f474a4457d8>
 ok
 test_repr_002_02 (test.test_repr_001.test_repr_and_str_002) ... 
-<Channel '3030','arte HD' at 0x7f559ed019e8>
-<Channel '3030','arte HD' at 0x7f559ed019e8>
+<Channel '10111','ATV HD' at 0x7f474a436fc0>
+<Channel '10111','ATV HD' at 0x7f474a436fc0>
 
 1
 1
 ok
 test_repr_003_01 (test.test_repr_001.test_repr_and_str_003) ... 
-<Frontend '192.168.47.12@6546' at 0x7f559e81e278>
-192.168.47.12@6546
+<Frontend 'galileogalilei@6546' at 0x7f474a435400>
+galileogalilei@6546
 
 ['#', '$', '%', '&', '(', ')', '*', '+', ',', '-', '.', '/', ':', ';', '<', '=', '>', '?', '[', '\\', ']', '_', 'ampersand', 'asterisk', 'backslash', 'backspace', 'backtab', 'bar', 'bracketleft', 'bracketright', 'colon', 'comma', 'delete', 'dollar', 'down', 'end', 'enter', 'equal', 'escape', 'f1', 'f10', 'f11', 'f12', 'f13', 'f14', 'f15', 'f16', 'f17', 'f18', 'f19', 'f2', 'f20', 'f21', 'f22', 'f23', 'f24', 'f3', 'f4', 'f5', 'f6', 'f7', 'f8', 'f9', 'greater', 'hash', 'home', 'insert', 'left', 'less', 'minus', 'numbersign', 'pagedown', 'pageup', 'parenleft', 'parenright', 'percent', 'period', 'pipe', 'plus', 'poundsign', 'question', 'return', 'right', 'semicolon', 'slash', 'space', 'tab', 'underscore', 'up', '|']
 ['#', '$', '%', '&', '(', ')', '*', '+', ',', '-', '.', '/', ':', ';', '<', '=', '>', '?', '[', '\\', ']', '_', 'ampersand', 'asterisk', 'backslash', 'backspace', 'backtab', 'bar', 'bracketleft', 'bracketright', 'colon', 'comma', 'delete', 'dollar', 'down', 'end', 'enter', 'equal', 'escape', 'f1', 'f10', 'f11', 'f12', 'f13', 'f14', 'f15', 'f16', 'f17', 'f18', 'f19', 'f2', 'f20', 'f21', 'f22', 'f23', 'f24', 'f3', 'f4', 'f5', 'f6', 'f7', 'f8', 'f9', 'greater', 'hash', 'home', 'insert', 'left', 'less', 'minus', 'numbersign', 'pagedown', 'pageup', 'parenleft', 'parenright', 'percent', 'period', 'pipe', 'plus', 'poundsign', 'question', 'return', 'right', 'semicolon', 'slash', 'space', 'tab', 'underscore', 'up', '|']
@@ -683,44 +736,53 @@ dict_items([('channelpriorities', 'Channel Recording Priorities'), ('channelrecp
 dict_items([('channelpriorities', 'Channel Recording Priorities'), ('channelrecpriority', 'Channel Recording Priorities'), ('guidegrid', 'Program Guide'), ('livetv', 'Live TV'), ('mainmenu', 'Main Menu'), ('managerecordings', 'Manage Recordings / Fix Conflicts'), ('managerecrules', 'Manage Recording Rules'), ('musicplaylists', 'Select music playlists'), ('mythgallery', 'MythGallery'), ('mythgame', 'MythGame'), ('mythnews', 'MythNews'), ('mythvideo', 'Video Default'), ('mythweather', 'MythWeather'), ('pbb', 'TV Recording Playback'), ('playbackbox', 'TV Recording Playback'), ('playbackrecordings', 'TV Recording Playback'), ('playdvd', 'Play Disc'), ('playlistview', 'Play music'), ('playmusic', 'Play music'), ('previousbox', 'Previously Recorded'), ('progfinder', 'Program Finder'), ('programfinder', 'Program Finder'), ('programguide', 'Program Guide'), ('reloadtheme', 'Reload Theme'), ('ripcd', 'Rip CD'), ('showborders', 'Toggle Show Widget Borders'), ('shownames', 'Toggle Show Widget Names'), ('statusbox', 'Status Screen'), ('videobrowser', 'Video Browser'), ('videogallery', 'Video Gallery'), ('videolistings', 'Video Listings'), ('videomanager', 'Video Manager'), ('viewscheduled', 'Manage Recordings / Fix Conflicts'), ('zoneminderconsole', 'ZoneMinder Console'), ('zoneminderevents', 'ZoneMinder Events'), ('zoneminderliveview', 'ZoneMinder Live View')])
 ok
 test_repr_004_01 (test.test_repr_001.test_repr_and_str_004) ... 
-<MythBE 'myth://server:6543/' at 0x7f559e812710>
-<MythBE 'myth://server:6543/' at 0x7f559e812710>
+<MythBE 'myth://kopernikus:6543/' at 0x7f474a4429b0>
+<MythBE 'myth://kopernikus:6543/' at 0x7f474a4429b0>
 ok
 test_repr_005_01 (test.test_repr_001.test_repr_and_str_005) ... 
-<System '/bin/echo' at 0x7f559e812f60>
-<System '/bin/echo' at 0x7f559e812f60>
+<System '/bin/echo' at 0x7f474ab31710>
+<System '/bin/echo' at 0x7f474ab31710>
 ok
 
 ----------------------------------------------------------------------
-Ran 8 tests in 0.102s
+Ran 8 tests in 0.143s
+
+OK
+test_Singleton_001_01 (test.test_singleton_001.test_Singleton_001)
+Test MythTV.utility.Singleton. ... ok
+test_Singleton_002_01 (test.test_singleton_001.test_Singleton_001)
+Test MythTV.utility.InputSingleton. ... ok
+
+----------------------------------------------------------------------
+Ran 2 tests in 0.001s
 
 OK
 Name                            Stmts   Miss Branch BrPart  Cover
 -----------------------------------------------------------------
 MythTV/__init__.py                 20      0      0      0   100%
-MythTV/_conn_mysqldb.py            59      7     20      5    85%
+MythTV/_conn_mysqldb.py            63      8     20      6    83%
 MythTV/_conn_oursql.py             37     33     12      0     8%
 MythTV/altdict.py                 169     38     59      7    78%
-MythTV/connections.py             423    140    125     21    63%
-MythTV/database.py                894    199    421     51    75%
+MythTV/connections.py             423    141    125     22    63%
+MythTV/database.py                889    202    419     50    75%
 MythTV/dataheap.py                927    349    309     63    59%
-MythTV/exceptions.py              126     94     52      7    23%
-MythTV/logging.py                 255     92    122     18    55%
-MythTV/methodheap.py              651    186    304     61    65%
+MythTV/exceptions.py              126     99     52      7    19%
+MythTV/logging.py                 322    144    154     22    48%
+MythTV/methodheap.py              653    189    304     66    64%
 MythTV/msearch.py                  69      7     28      7    84%
-MythTV/mythproto.py               610    179    278     53    64%
-MythTV/static.py                  235      0      0      0   100%
-MythTV/system.py                  281     40    142     18    81%
+MythTV/mythproto.py               612    178    278     52    64%
+MythTV/static.py                  237      0      0      0   100%
+MythTV/system.py                  281     41    142     19    80%
 MythTV/utility/__init__.py          7      0      0      0   100%
 MythTV/utility/altdict.py         103     75     14      0    24%
 MythTV/utility/dequebuffer.py     232     92     74     15    55%
 MythTV/utility/dicttoxml.py       200    200     90      0     0%
-MythTV/utility/dt.py              315     47    142     23    80%
+MythTV/utility/dt.py              316     36    142     29    85%
 MythTV/utility/enum.py             82     35     58     17    50%
 MythTV/utility/mixin.py           128    113    101      3     8%
-MythTV/utility/other.py           397    121    185     30    64%
-MythTV/utility/singleton.py        45     24     14      1    41%
+MythTV/utility/other.py           404    125    185     28    64%
+MythTV/utility/singleton.py        45     14     14      2    63%
 -----------------------------------------------------------------
-TOTAL                            6265   2071   2550    400    62%
-
+TOTAL                            6345   2119   2580    415    62%
+(dev3.8) local-admin@newton:~/MythTV/MythTV_python_master$ 
 

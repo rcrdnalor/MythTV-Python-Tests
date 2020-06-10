@@ -418,7 +418,7 @@
 <p id="t107" class="pln">                <span class="key">lambda</span> <span class="nam">x</span><span class="op">:</span> <span class="nam">datetime</span><span class="op">.</span><span class="nam">fromRfc</span><span class="op">(</span><span class="nam">x</span><span class="op">,</span> <span class="nam">datetime</span><span class="op">.</span><span class="nam">UTCTZ</span><span class="op">(</span><span class="op">)</span><span class="op">)</span><span class="xx">\</span><span class="strut">&nbsp;</span></p>
 <p id="t108" class="pln">                                  <span class="op">.</span><span class="nam">astimezone</span><span class="op">(</span><span class="nam">datetime</span><span class="op">.</span><span class="nam">localTZ</span><span class="op">(</span><span class="op">)</span><span class="op">)</span><span class="op">]</span><span class="strut">&nbsp;</span></p>
 <p id="t109" class="stm run hide_run">    <span class="nam">_inv_trans</span> <span class="op">=</span> <span class="op">[</span>  <span class="nam">str</span><span class="op">,</span><span class="strut">&nbsp;</span></p>
-<p id="t110" class="pln">                    <span class="key">lambda</span> <span class="nam">x</span><span class="op">:</span> <span class="nam">locale</span><span class="op">.</span><span class="nam">format</span><span class="op">(</span><span class="str">"%0.6f"</span><span class="op">,</span> <span class="nam">x</span><span class="op">)</span><span class="op">,</span><span class="strut">&nbsp;</span></p>
+<p id="t110" class="pln">                    <span class="key">lambda</span> <span class="nam">x</span><span class="op">:</span> <span class="nam">locale</span><span class="op">.</span><span class="nam">format_string</span><span class="op">(</span><span class="str">"%0.6f"</span><span class="op">,</span> <span class="nam">x</span><span class="op">)</span><span class="op">,</span><span class="strut">&nbsp;</span></p>
 <p id="t111" class="pln">                    <span class="key">lambda</span> <span class="nam">x</span><span class="op">:</span> <span class="nam">str</span><span class="op">(</span><span class="nam">int</span><span class="op">(</span><span class="nam">x</span><span class="op">)</span><span class="op">)</span><span class="op">,</span><span class="strut">&nbsp;</span></p>
 <p id="t112" class="pln">                    <span class="key">lambda</span> <span class="nam">x</span><span class="op">:</span> <span class="nam">x</span><span class="op">,</span><span class="strut">&nbsp;</span></p>
 <p id="t113" class="pln">                    <span class="key">lambda</span> <span class="nam">x</span><span class="op">:</span> <span class="nam">str</span><span class="op">(</span><span class="nam">int</span><span class="op">(</span><span class="nam">x</span><span class="op">.</span><span class="nam">timestamp</span><span class="op">(</span><span class="op">)</span><span class="op">)</span><span class="op">)</span><span class="op">,</span><span class="strut">&nbsp;</span></p>
@@ -582,7 +582,7 @@
     <div class="content">
         <p>
             <a class="nav" href="index.html">&#xab; index</a> &nbsp; &nbsp; <a class="nav" href="https://coverage.readthedocs.io">coverage.py v4.5</a>,
-            created at 2019-12-23 17:01
+            created at 2020-06-09 19:04
         </p>
     </div>
 </div>

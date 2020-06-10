@@ -765,7 +765,7 @@
 <p id="t354" class="pln">            <span class="com"># get IO mode from pipe</span><span class="strut">&nbsp;</span></p>
 <p id="t355" class="stm mis">            <span class="nam">mode</span> <span class="op">=</span> <span class="nam">pipe</span><span class="op">.</span><span class="nam">mode</span><span class="strut">&nbsp;</span></p>
 <p id="t356" class="pln"><span class="strut">&nbsp;</span></p>
-<p id="t357" class="stm run hide_run">        <span class="key">if</span> <span class="op">(</span><span class="nam">cls</span><span class="op">.</span><span class="nam">_pollingthread</span> <span class="key">is</span> <span class="nam">None</span><span class="op">)</span> <span class="key">or</span> <span class="key">not</span> <span class="nam">cls</span><span class="op">.</span><span class="nam">_pollingthread</span><span class="op">.</span><span class="nam">isAlive</span><span class="op">(</span><span class="op">)</span><span class="op">:</span><span class="strut">&nbsp;</span></p>
+<p id="t357" class="stm run hide_run">        <span class="key">if</span> <span class="op">(</span><span class="nam">cls</span><span class="op">.</span><span class="nam">_pollingthread</span> <span class="key">is</span> <span class="nam">None</span><span class="op">)</span> <span class="key">or</span> <span class="key">not</span> <span class="nam">cls</span><span class="op">.</span><span class="nam">_pollingthread</span><span class="op">.</span><span class="nam">is_alive</span><span class="op">(</span><span class="op">)</span><span class="op">:</span><span class="strut">&nbsp;</span></p>
 <p id="t358" class="pln">            <span class="com"># create new thread, and set it to not block shutdown</span><span class="strut">&nbsp;</span></p>
 <p id="t359" class="stm run hide_run">            <span class="nam">cls</span><span class="op">.</span><span class="nam">_pollingthread</span> <span class="op">=</span> <span class="nam">_PollingThread</span><span class="op">(</span><span class="op">)</span><span class="strut">&nbsp;</span></p>
 <p id="t360" class="stm run hide_run">            <span class="nam">cls</span><span class="op">.</span><span class="nam">_pollingthread</span><span class="op">.</span><span class="nam">daemon</span> <span class="op">=</span> <span class="nam">True</span><span class="strut">&nbsp;</span></p>
@@ -782,7 +782,7 @@
     <div class="content">
         <p>
             <a class="nav" href="index.html">&#xab; index</a> &nbsp; &nbsp; <a class="nav" href="https://coverage.readthedocs.io">coverage.py v4.5</a>,
-            created at 2019-12-23 17:01
+            created at 2020-06-09 19:04
         </p>
     </div>
 </div>
