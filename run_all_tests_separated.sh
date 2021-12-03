@@ -1,6 +1,6 @@
 #!/bin/bash
 
-# Defime a list of test_modules
+# Define a list of test_modules
 declare -a test_modules_full=( \
 "test_Dataheap_Job_001" \
 "test_Dataheap_Job_002" \
@@ -19,6 +19,8 @@ declare -a test_modules_full=( \
 "test_datetime_003" \
 "test_DBCache_001" \
 "test_DictData_001" \
+"test_DictInv_001" \
+"test_enum_001" \
 "test_Logging_001" \
 "test_Logging_002" \
 "test_Logging_003" \
@@ -35,6 +37,7 @@ declare -a test_modules_full=( \
 "test_MSearch_001" \
 "test_MSearch_002" \
 "test_Mythproto_001" \
+"test_OrdDict_001" \
 "test_System_001" \
 "test_repr_001" \
 "test_singleton_001" \

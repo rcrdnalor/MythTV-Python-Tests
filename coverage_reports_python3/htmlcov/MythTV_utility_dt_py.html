@@ -1022,7 +1022,7 @@
 <p id="t477" class="stm run hide_run">    <span class="key">def</span> <span class="nam">timestamp</span><span class="op">(</span><span class="nam">self</span><span class="op">)</span><span class="op">:</span><span class="strut">&nbsp;</span></p>
 <p id="t478" class="pln">        <span class="com"># utc time = local time - utc offset</span><span class="strut">&nbsp;</span></p>
 <p id="t479" class="stm run hide_run">        <span class="nam">utc_naive</span> <span class="op">=</span> <span class="nam">self</span><span class="op">.</span><span class="nam">replace</span><span class="op">(</span><span class="nam">tzinfo</span><span class="op">=</span><span class="key">None</span><span class="op">)</span> <span class="op">-</span> <span class="nam">self</span><span class="op">.</span><span class="nam">utcoffset</span><span class="op">(</span><span class="op">)</span><span class="strut">&nbsp;</span></p>
-<p id="t480" class="stm run hide_run">        <span class="nam">utc_naive</span> <span class="op">=</span> <span class="nam">utc_naive</span><span class="op">.</span><span class="nam">replace</span><span class="op">(</span><span class="nam">tzinfo</span><span class="op">=</span><span class="key">None</span><span class="op">)</span>       <span class="com">### XXX</span><span class="strut">&nbsp;</span></p>
+<p id="t480" class="stm run hide_run">        <span class="nam">utc_naive</span> <span class="op">=</span> <span class="nam">utc_naive</span><span class="op">.</span><span class="nam">replace</span><span class="op">(</span><span class="nam">tzinfo</span><span class="op">=</span><span class="key">None</span><span class="op">)</span><span class="strut">&nbsp;</span></p>
 <p id="t481" class="stm run hide_run">        <span class="nam">utc_epoch</span> <span class="op">=</span> <span class="nam">self</span><span class="op">.</span><span class="nam">utcfromtimestamp</span><span class="op">(</span><span class="num">0</span><span class="op">)</span><span class="op">.</span><span class="nam">replace</span><span class="op">(</span><span class="nam">tzinfo</span><span class="op">=</span><span class="key">None</span><span class="op">)</span><span class="strut">&nbsp;</span></p>
 <p id="t482" class="stm run hide_run">        <span class="key">return</span> <span class="op">(</span><span class="op">(</span><span class="nam">utc_naive</span> <span class="op">-</span> <span class="nam">utc_epoch</span><span class="op">)</span><span class="op">.</span><span class="nam">total_seconds</span><span class="op">(</span><span class="op">)</span><span class="op">)</span><span class="strut">&nbsp;</span></p>
 <p id="t483" class="pln"><span class="strut">&nbsp;</span></p>
@@ -1050,7 +1050,7 @@
     <div class="content">
         <p>
             <a class="nav" href="index.html">&#xab; index</a> &nbsp; &nbsp; <a class="nav" href="https://coverage.readthedocs.io">coverage.py v4.5</a>,
-            created at 2020-06-08 19:49
+            created at 2021-12-03 15:59
         </p>
     </div>
 </div>

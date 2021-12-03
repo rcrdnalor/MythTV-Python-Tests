@@ -173,10 +173,12 @@ Example:
 $ export PYTHONPATH=`pwd`
 ```
 
-Create a symlink for tmdb3
+Create a symlinks for tmdb3 and other metadata grabber 
 ```
 $ cd MythTV
 $ ln -s ../tmdb3/tmdb3 tmdb3
+$ ln -s ../tvmaze
+$ ln -s ../ttvdbv4
 ```
 
 Create symlink for the metadata grabber scripts:
