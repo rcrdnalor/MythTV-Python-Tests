@@ -3,7 +3,6 @@
 import unittest
 
 from MythTV import Singleton, InputSingleton, CmpSingleton
-from future.utils import with_metaclass
 
 
 class test_Singleton_001(unittest.TestCase):
@@ -15,7 +14,7 @@ class test_Singleton_001(unittest.TestCase):
         global count_1
         count_1 = 0
 
-        class foo_01(with_metaclass(Singleton, object)):
+        class foo_01(object, metaclass=Singleton):
             def __init__(self):
                 global count_1
                 self._count = count_1
@@ -36,7 +35,7 @@ class test_Singleton_001(unittest.TestCase):
         global count_2
         count_2 = 0
 
-        class foo_02(with_metaclass(InputSingleton, object)):
+        class foo_02(object, metaclass=InputSingleton):
             def __init__(self, fooname = None):
                 global count_2
                 self._count = count_2

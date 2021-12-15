@@ -106,15 +106,15 @@ class test_OrdDict_001(unittest.TestCase):
         self.assertTrue('1234.4567' in list(ivalues))
         self.assertTrue(('field_c', '1') in list(iitems))
 
-#    def test_OrdDict_001_06(self):
-#        """Test pickling of the OrdDict."""
-#        with open('test_ord_dict_01.pkl', 'wb') as fw:
-#            pickle.dump(self.my_ord_dict, fw)
-#        with open('test_ord_dict_01.pkl', 'rb') as fr:
-#            pod = pickle.load(fr)
-#        self.assertTrue(self.my_ord_dict == pod)
-#        pod.x = 'blah'
-#        self.assertFalse(pod == self.my_ord_dict)
+    def test_OrdDict_001_06(self):
+        """Test pickling of the OrdDict."""
+        with open('test_ord_dict_01.pkl', 'wb') as fw:
+            pickle.dump(self.my_ord_dict, fw)
+        with open('test_ord_dict_01.pkl', 'rb') as fr:
+            pod = pickle.load(fr)
+        self.assertTrue(self.my_ord_dict == pod)
+        pod.x = 'blah'
+        self.assertFalse(pod == self.my_ord_dict)
 
     def test_OrdDict_001_07(self):
         """Test a copy of the OrdDict."""

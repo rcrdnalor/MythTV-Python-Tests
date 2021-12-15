@@ -8,7 +8,7 @@
     
     
     <meta http-equiv="X-UA-Compatible" content="IE=emulateIE7" />
-    <title>Coverage for MythTV/methodheap.py: 66%</title>
+    <title>Coverage for MythTV/methodheap.py: 64%</title>
     <link rel="stylesheet" href="style.css" type="text/css">
     
     <script type="text/javascript" src="jquery.min.js"></script>
@@ -23,17 +23,17 @@
 <div id="header">
     <div class="content">
         <h1>Coverage for <b>MythTV/methodheap.py</b> :
-            <span class="pc_cov">66%</span>
+            <span class="pc_cov">64%</span>
         </h1>
 
         <h2 class="stats">
             653 statements &nbsp;
-            <span class="run hide_run shortkey_r button_toggle_run">472 run</span>
-            <span class="mis shortkey_m button_toggle_mis">181 missing</span>
+            <span class="run hide_run shortkey_r button_toggle_run">464 run</span>
+            <span class="mis shortkey_m button_toggle_mis">189 missing</span>
             <span class="exc shortkey_x button_toggle_exc">0 excluded</span>
 
             
-                <span class="par run hide_run shortkey_p button_toggle_par">68 partial</span>
+                <span class="par run hide_run shortkey_p button_toggle_par">66 partial</span>
             
         </h2>
     </div>
@@ -1089,15 +1089,15 @@
 <p id="n1044" class="pln"><a href="#n1044">1044</a></p>
 <p id="n1045" class="stm run hide_run"><a href="#n1045">1045</a></p>
 <p id="n1046" class="stm par run hide_run"><a href="#n1046">1046</a></p>
-<p id="n1047" class="stm run hide_run"><a href="#n1047">1047</a></p>
-<p id="n1048" class="stm run hide_run"><a href="#n1048">1048</a></p>
-<p id="n1049" class="stm run hide_run"><a href="#n1049">1049</a></p>
-<p id="n1050" class="stm par run hide_run"><a href="#n1050">1050</a></p>
+<p id="n1047" class="stm mis"><a href="#n1047">1047</a></p>
+<p id="n1048" class="stm mis"><a href="#n1048">1048</a></p>
+<p id="n1049" class="stm mis"><a href="#n1049">1049</a></p>
+<p id="n1050" class="stm mis"><a href="#n1050">1050</a></p>
 <p id="n1051" class="stm mis"><a href="#n1051">1051</a></p>
-<p id="n1052" class="stm par run hide_run"><a href="#n1052">1052</a></p>
-<p id="n1053" class="stm run hide_run"><a href="#n1053">1053</a></p>
-<p id="n1054" class="stm run hide_run"><a href="#n1054">1054</a></p>
-<p id="n1055" class="stm run hide_run"><a href="#n1055">1055</a></p>
+<p id="n1052" class="stm mis"><a href="#n1052">1052</a></p>
+<p id="n1053" class="stm mis"><a href="#n1053">1053</a></p>
+<p id="n1054" class="stm mis"><a href="#n1054">1054</a></p>
+<p id="n1055" class="stm mis"><a href="#n1055">1055</a></p>
 <p id="n1056" class="stm mis"><a href="#n1056">1056</a></p>
 <p id="n1057" class="stm mis"><a href="#n1057">1057</a></p>
 <p id="n1058" class="pln"><a href="#n1058">1058</a></p>
@@ -2388,16 +2388,16 @@
 <p id="t1043" class="stm run hide_run">        <span class="nam">oldvids</span> <span class="op">=</span> <span class="op">[</span><span class="op">]</span><span class="strut">&nbsp;</span></p>
 <p id="t1044" class="pln"><span class="strut">&nbsp;</span></p>
 <p id="t1045" class="stm run hide_run">        <span class="nam">match</span> <span class="op">=</span> <span class="nam">r</span><span class="op">.</span><span class="nam">match</span><span class="op">(</span><span class="nam">lock</span><span class="op">.</span><span class="nam">event</span><span class="op">)</span><span class="strut">&nbsp;</span></p>
-<p id="t1046" class="stm par run hide_run"><span class="annotate short">1046&#x202F;&#x219B;&#x202F;1059</span><span class="annotate long">line 1046 didn't jump to line 1059, because the condition on line 1046 was never false</span>        <span class="key">if</span> <span class="nam">match</span><span class="op">.</span><span class="nam">group</span><span class="op">(</span><span class="num">1</span><span class="op">)</span> <span class="op">==</span> <span class="str">"VIDEO_LIST_CHANGE"</span><span class="op">:</span><span class="strut">&nbsp;</span></p>
-<p id="t1047" class="stm run hide_run">            <span class="key">for</span> <span class="nam">entry</span> <span class="key">in</span> <span class="nam">match</span><span class="op">.</span><span class="nam">group</span><span class="op">(</span><span class="num">3</span><span class="op">)</span><span class="op">.</span><span class="nam">split</span><span class="op">(</span><span class="nam">BACKEND_SEP</span><span class="op">)</span><span class="op">:</span><span class="strut">&nbsp;</span></p>
-<p id="t1048" class="stm run hide_run">                <span class="nam">type</span><span class="op">,</span><span class="nam">intid</span> <span class="op">=</span> <span class="nam">entry</span><span class="op">.</span><span class="nam">split</span><span class="op">(</span><span class="str">'::'</span><span class="op">)</span><span class="strut">&nbsp;</span></p>
-<p id="t1049" class="stm run hide_run">                <span class="nam">intid</span> <span class="op">=</span> <span class="nam">int</span><span class="op">(</span><span class="nam">intid</span><span class="op">)</span><span class="strut">&nbsp;</span></p>
-<p id="t1050" class="stm par run hide_run"><span class="annotate short">1050&#x202F;&#x219B;&#x202F;1051</span><span class="annotate long">line 1050 didn't jump to line 1051, because the condition on line 1050 was never true</span>                <span class="key">if</span> <span class="nam">type</span> <span class="op">==</span> <span class="str">'added'</span><span class="op">:</span><span class="strut">&nbsp;</span></p>
+<p id="t1046" class="stm par run hide_run"><span class="annotate short">1046&#x202F;&#x219B;&#x202F;1047</span><span class="annotate long">line 1046 didn't jump to line 1047, because the condition on line 1046 was never true</span>        <span class="key">if</span> <span class="nam">match</span><span class="op">.</span><span class="nam">group</span><span class="op">(</span><span class="num">1</span><span class="op">)</span> <span class="op">==</span> <span class="str">"VIDEO_LIST_CHANGE"</span><span class="op">:</span><span class="strut">&nbsp;</span></p>
+<p id="t1047" class="stm mis">            <span class="key">for</span> <span class="nam">entry</span> <span class="key">in</span> <span class="nam">match</span><span class="op">.</span><span class="nam">group</span><span class="op">(</span><span class="num">3</span><span class="op">)</span><span class="op">.</span><span class="nam">split</span><span class="op">(</span><span class="nam">BACKEND_SEP</span><span class="op">)</span><span class="op">:</span><span class="strut">&nbsp;</span></p>
+<p id="t1048" class="stm mis">                <span class="nam">type</span><span class="op">,</span><span class="nam">intid</span> <span class="op">=</span> <span class="nam">entry</span><span class="op">.</span><span class="nam">split</span><span class="op">(</span><span class="str">'::'</span><span class="op">)</span><span class="strut">&nbsp;</span></p>
+<p id="t1049" class="stm mis">                <span class="nam">intid</span> <span class="op">=</span> <span class="nam">int</span><span class="op">(</span><span class="nam">intid</span><span class="op">)</span><span class="strut">&nbsp;</span></p>
+<p id="t1050" class="stm mis">                <span class="key">if</span> <span class="nam">type</span> <span class="op">==</span> <span class="str">'added'</span><span class="op">:</span><span class="strut">&nbsp;</span></p>
 <p id="t1051" class="stm mis">                    <span class="nam">newvids</span><span class="op">.</span><span class="nam">append</span><span class="op">(</span><span class="nam">Video</span><span class="op">(</span><span class="nam">intid</span><span class="op">)</span><span class="op">)</span><span class="strut">&nbsp;</span></p>
-<p id="t1052" class="stm par run hide_run"><span class="annotate short">1052&#x202F;&#x219B;&#x202F;1056</span><span class="annotate long">line 1052 didn't jump to line 1056, because the condition on line 1052 was never false</span>                <span class="key">elif</span> <span class="nam">type</span> <span class="op">==</span> <span class="str">'moved'</span><span class="op">:</span><span class="strut">&nbsp;</span></p>
-<p id="t1053" class="stm run hide_run">                    <span class="nam">v</span> <span class="op">=</span> <span class="nam">startvids</span><span class="op">[</span><span class="nam">intid</span><span class="op">]</span><span class="strut">&nbsp;</span></p>
-<p id="t1054" class="stm run hide_run">                    <span class="nam">v</span><span class="op">.</span><span class="nam">_pull</span><span class="op">(</span><span class="op">)</span><span class="strut">&nbsp;</span></p>
-<p id="t1055" class="stm run hide_run">                    <span class="nam">movvids</span><span class="op">.</span><span class="nam">append</span><span class="op">(</span><span class="nam">v</span><span class="op">)</span><span class="strut">&nbsp;</span></p>
+<p id="t1052" class="stm mis">                <span class="key">elif</span> <span class="nam">type</span> <span class="op">==</span> <span class="str">'moved'</span><span class="op">:</span><span class="strut">&nbsp;</span></p>
+<p id="t1053" class="stm mis">                    <span class="nam">v</span> <span class="op">=</span> <span class="nam">startvids</span><span class="op">[</span><span class="nam">intid</span><span class="op">]</span><span class="strut">&nbsp;</span></p>
+<p id="t1054" class="stm mis">                    <span class="nam">v</span><span class="op">.</span><span class="nam">_pull</span><span class="op">(</span><span class="op">)</span><span class="strut">&nbsp;</span></p>
+<p id="t1055" class="stm mis">                    <span class="nam">movvids</span><span class="op">.</span><span class="nam">append</span><span class="op">(</span><span class="nam">v</span><span class="op">)</span><span class="strut">&nbsp;</span></p>
 <p id="t1056" class="stm mis">                <span class="key">elif</span> <span class="nam">type</span> <span class="op">==</span> <span class="str">'deleted'</span><span class="op">:</span><span class="strut">&nbsp;</span></p>
 <p id="t1057" class="stm mis">                    <span class="nam">oldvids</span><span class="op">.</span><span class="nam">append</span><span class="op">(</span><span class="nam">startvids</span><span class="op">[</span><span class="nam">intid</span><span class="op">]</span><span class="op">)</span><span class="strut">&nbsp;</span></p>
 <p id="t1058" class="pln"><span class="strut">&nbsp;</span></p>
@@ -2650,7 +2650,7 @@
     <div class="content">
         <p>
             <a class="nav" href="index.html">&#xab; index</a> &nbsp; &nbsp; <a class="nav" href="https://coverage.readthedocs.io">coverage.py v4.5</a>,
-            created at 2021-12-03 15:59
+            created at 2020-06-08 19:49
         </p>
     </div>
 </div>

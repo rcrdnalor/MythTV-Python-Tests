@@ -95,11 +95,13 @@ else
 fi
 
 
-if is_python2; then
-    TPYTHONCOVERAGE="python-coverage"
-else
+#if is_python2; then
+#    TPYTHONCOVERAGE="python-coverage"
+#else
+#    TPYTHONCOVERAGE="python3-coverage"
+#fi
     TPYTHONCOVERAGE="python3-coverage"
-fi
+
 
 echo "Using ${TPYTHONCOVERAGE}."
 echo

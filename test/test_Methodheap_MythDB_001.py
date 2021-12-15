@@ -242,7 +242,8 @@ class test_Methodheap_MythDB_003(unittest.TestCase):
 class test_Methodheap_MythDB_004(unittest.TestCase):
     """Test method 'searchJobs' from MythTV.MythDB()."""
 
-    mydb = MythDB()
+    def setUp(self):
+        self.mydb = MythDB()
 
     def test_Methodheap_MythDB_004_searchJobs_01(self):
         """Test 'searchJobs' method from MythTV.MythDB().
@@ -329,7 +330,8 @@ class test_Methodheap_MythDB_006(unittest.TestCase):
 class test_Methodheap_MythDB_007(unittest.TestCase):
     """Test method 'getFrontends' from MythTV.MythDB()."""
 
-    mydb = MythDB()
+    def setUp(self):
+        self.mydb = MythDB()
 
     def test_Methodheap_MythDB_007_getFrontends_01(self):
         """Test 'getFrontends' method from MythTV.MythDB().
@@ -373,7 +375,8 @@ class test_Methodheap_MythDB_009(unittest.TestCase):
     """Test method 'scanVideos' from MythTV.MythDB().
     """
 
-    mydb = MythDB()
+    def setUp(self):
+        self.mydb = MythDB()
 
     def test_Methodheap_MythDB_009_scanVideos_01(self):
         """Test 'scanVideos' method from MythTV.MythDB().
@@ -414,7 +417,8 @@ class test_Methodheap_MythDB_010(unittest.TestCase):
 class test_Methodheap_MythDB_100(unittest.TestCase):
     """Test method 'gethostname' from MythTV.MythDB() inherited from DBCache."""
 
-    mydb = MythDB()
+    def setUp(self):
+        self.mydb = MythDB()
 
     def test_Methodheap_MythDB_100_gethostnames_01(self):
         """Test 'gethostname' method from MythTV.MythDB() inherited from DBCache.
@@ -429,7 +433,8 @@ class test_Methodheap_MythDB_100(unittest.TestCase):
 class test_Methodheap_MythDB_101(unittest.TestCase):
     """Test method 'getMasterBackend' from MythTV.MythDB() inherited from DBCache."""
 
-    mydb = MythDB()
+    def setUp(self):
+        self.mydb = MythDB()
 
     def test_Methodheap_MythDB_101_getMasterBackend_01(self):
         """Test 'getMasterBackend' method from MythTV.MythDB() inherited from DBCache.
@@ -443,7 +448,8 @@ class test_Methodheap_MythDB_101(unittest.TestCase):
 class test_Methodheap_MythDB_102(unittest.TestCase):
     """Test method 'getStorageGroup' from MythTV.MythDB() inherited from DBCache."""
 
-    mydb = MythDB()
+    def setUp(self):
+        self.mydb = MythDB()
 
     def test_Methodheap_MythDB_102_getStorageGroup_01(self):
         """Test 'getStorageGroup' method from MythTV.MythDB() inherited from DBCache.
